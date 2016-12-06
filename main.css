@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff2e6;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #ff1a1a;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #fff2e6;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.4em;
+  }
+
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+/* end  of  navbar*/
+
+body {
+  background-color: cream;
+}
+.image {
+  text-align: center; # actually image alignment
+
+}
+
+  img {
+position: relative;
+top: 10px;
+  }
+
+body {
+	height: 100%;
+	margin: 0;
+	/*text-align: center;*/
+	width: 100%;
+}
+
+h1 {
+  position: relative;
+  top: 30px;
+  text-align: center;
+	font-size: 60px;
+  font-family: Palatino, 'Palatino Linotype', serif;
+  color: rgb(121,149,117);
+}
+
+h2 {
+  position: relative;
+  top: 20px;
+  text-align: center;
+	font-size: 56px;
+	color: black;
+}
+
+
+.hero {
+	padding: 250px 0;
+	margin: 30px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #ffffff;
+  /*background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg");
+  background-size: cover;*/
+}
+
+
+p {
+position: relative;
+top: -200px;
+font-size: 2rem;
+color: black;
+text-align: left;
+}
+
+.hero a {
+	color: #00FFAA;
+	font-size: 1.25em;
+	text-decoration: none;
+}
+
+#footer {
+  text-align: center;
+  font-size: 0.75rem;
+}
