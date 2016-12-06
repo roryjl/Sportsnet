@@ -9,7 +9,7 @@
       <ul>
         <li class="home"><a href="#">Home</a></li>
         <li class="tutorials"><a class="active" href="#">Sports</a></li>
-        <li class="about"><a href="#">News</a></li>
+        <li class="about"><a href="roryjl.github.io/news">News</a></li>
         <li class="news"><a href="#">ScoreCentre</a></li>
         <li class="contact"><a href="#">About</a></li>
       </ul>
