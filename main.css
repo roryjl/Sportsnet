@@ -1,119 +1,204 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #fff2e6;
+.container {
+  padding: 35px;
+  margin-right: 35px;
 }
 
-.nav ul {
-  list-style: none;
-  background-color: #ff1a1a;
+.side {
+  float: right;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 43px;
+  width: 400px;
+  height: 1047px;
+  border-radius: 10px;
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 860px;
+  height: 48%;
+  margin-left: 30px;
+  margin-top: 60px;
+  overflow: hidden; /*doesnt allow img outside of div*/
+  border-radius: 5px;
+  box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.mainimg {
+  width: 430px;
+  height: 90%;
+  padding: 10px;
+  /*background-color: black;*/
+}
+
+.maintext {
+  width: 400px;
+  height: 90%;
+  margin: 10px;
+  /*background-color: black;*/
+  float: right;
+}
+
+img {
+  max-width: 100%;
+  max-width: 100%;
   text-align: center;
-  padding: 0;
-  margin: 0;
-}
-.nav li {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  transition: .3s background-color;
+.first {
+  background-color: rgba(0, 0, 0, 0.1); /*blue*/
+  width: 30%;
+  height: 48%;
+  float: left;
+  margin-top: 30px;
+  margin: 30px;
+  border-radius: 5px;
+   /*overflow: hidden - doesnt allow img outside of div*/
 }
 
-.nav a:hover {
-  background-color: #005f5f;
+.text{
+  /*background-color: black;*/
+  text-align: center; /*centre aligns h2*/
 }
 
-.nav a.active {
-  background-color: #fff2e6;
-  color: #444;
-  cursor: default;
+.second {
+  background-color: rgba(0, 0, 0, 0.1); /*red*/
+  width: 30%; /*ca. 347px*/
+  height: 48%;
+  float: left;
+  margin-top: 30px;
+  text-align: center;
+  margin: 30px;
+  border-radius: 5px;
 }
 
-@media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 70px;
-    line-height: 70px;
-    font-size: 1.4em;
-  }
-
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
-  }
-/* end  of  navbar*/
-
-body {
-  background-color: cream;
-}
-.image {
-  text-align: center; # actually image alignment
-
+.third{
+ background-color: rgba(0, 0, 0, 0.1); /*black*/
+ width: 30%;
+ height: 48%;
+ margin-top: 377px;
+ margin-left: 0px;
+ margin: 30px;
+ float: left;
+ border-radius: 5px;
 }
 
-  img {
-position: relative;
-top: 10px;
-  }
-
-body {
-	height: 100%;
-	margin: 0;
-	/*text-align: center;*/
-	width: 100%;
+.fourth{
+ background-color: rgba(0, 0, 0, 0.1); /*pink*/
+ width: 30%;
+ height: 48%;
+ margin-top: -334px;
+ float: left;
+ margin: 30px;
+ border-radius: 5px;
 }
+
 
 h1 {
-  position: relative;
-  top: 30px;
+  float: right;
   text-align: center;
-	font-size: 60px;
-  font-family: Palatino, 'Palatino Linotype', serif;
-  color: rgb(121,149,117);
+  margin: 30px;
 }
 
 h2 {
+  text-align: center;
+}
+
+body {
+/*background-image: url(file:///Users/BrianLambe/Downloads/logo.png);*/
+background-color: white;
+min-height: 100%;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 70px; /*red box in navbar dimensions*/
+  height: 70px; /*red box in navbar dimensions*/
+  width: 130px;
+
+}
+
+nav ul {
+  text-align: center;
+  background-color: #005689; /*backgr color in navbar - was #ddd*/
+  /*margin-right: 100px;
+  margin-left: 100px;*/
+  margin-top: 0px;
+  border-radius: 15px;
+  padding: 0; /*removes gap on left side of main nav*/
+}
+
+nav a:hover {
+background-color: #005689 /*mainnav backgr color hover - was #d5d5d5*/
+cursor: pointer;
+border-radius: 5px;
+color: lightgrey; /*text hover color main nav*/
+}
+
+nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc being hovered*/
+  background-color: #005689; /*was #d5d5d5 */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /*text color in mainnav - was black*/
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+}
+
+/*start of dropdown*/
+
+ul.sub-menu{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7); /*dropdown backroundcolor*/
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.7); /*dropdown font color*/
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
+  width: 129px;
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  visibility: hidden; /*hides dropdown when not hovered*/
+  font-size: .7em;
+  border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
+  transform: translateY(-4em); /* dropdown slide down animation start*/
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
+}
+
+ul.sub-menu li{
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+ul.sub-menu li:hover {  /*dropdown menu hover*/
+  background-color: #666;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 122px; /*width for dropdown hover*/
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
+}
+
+nav li:hover .sub-menu{
+  visibility: visible;  /*makes dropdown appear when hovered*/
+  z-index: 1; /*dropdown slide animation start*/
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /*allows you to hover on dropdown after animation --dropdown slide animation end*/
+}
+
+/*end of dropdown*/
+
+
+
+footer{
+  clear: both;
   position: relative;
-  top: 20px;
+  z-index: 10;
+  height: 3em;
+  margin-top: 2em;
   text-align: center;
-	font-size: 56px;
-	color: black;
-}
-
-
-.hero {
-	padding: 250px 0;
-	margin: 30px;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  color: #ffffff;
-  /*background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg");
-  background-size: cover;*/
-}
-
-
-p {
-position: relative;
-top: -200px;
-font-size: 2rem;
-color: black;
-text-align: left;
-}
-
-.hero a {
-	color: #00FFAA;
-	font-size: 1.25em;
-	text-decoration: none;
-}
-
-#footer {
-  text-align: center;
-  font-size: 0.75rem;
 }
