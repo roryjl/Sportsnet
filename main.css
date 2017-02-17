@@ -10,6 +10,9 @@
   width: 350px;
   height: 1047px;
   border-radius: 10px;
+  top: 92px;
+  position: absolute;
+  right: 0;
 }
 
 .main {
