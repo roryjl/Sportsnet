@@ -1,3 +1,11 @@
+@media only screen and (max-width: 1280px) {
+
+    [class*="side"] {
+        float: none;
+        visibility: hidden;
+    }
+}
+
 .container {
   padding: 35px;
   margin-right: 35px;
@@ -5,24 +13,24 @@
 
 .side {
   float: right;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   margin-top: 43px;
-  width: 350px;
+  width: 350px; /*was 400px*/
   height: 1047px;
-  border-radius: 10px;
+  border-radius: 1px;
   top: 92px;
   position: absolute;
-  right: 0;
+  right: 10px;
 }
 
 .main {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   width: 860px;
   height: 48%;
   margin-left: 30px;
   margin-top: 60px;
   overflow: hidden; /*doesnt allow img outside of div*/
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
@@ -48,13 +56,13 @@ img {
 }
 
 .first {
-  background-color: rgba(0, 0, 0, 0.1); /*blue*/
+  background-color: white; /*blue*/
   width: 30%;
   height: 48%;
   float: left;
   margin-top: 30px;
   margin: 30px;
-  border-radius: 5px;
+  border-radius: 1px;
    /*overflow: hidden - doesnt allow img outside of div*/
 }
 
@@ -64,35 +72,35 @@ img {
 }
 
 .second {
-  background-color: rgba(0, 0, 0, 0.1); /*red*/
+  background-color: white; /*red*/
   width: 30%; /*ca. 347px*/
   height: 48%;
   float: left;
   margin-top: 30px;
   text-align: center;
   margin: 30px;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 
 .third{
- background-color: rgba(0, 0, 0, 0.1); /*black*/
+ background-color: white; /*black*/
  width: 30%;
  height: 48%;
  margin-top: 377px;
  margin-left: 0px;
  margin: 30px;
  float: left;
- border-radius: 5px;
+ border-radius: 1px;
 }
 
 .fourth{
- background-color: rgba(0, 0, 0, 0.1); /*pink*/
+ background-color: white; /*pink*/
  width: 30%;
  height: 48%;
  margin-top: -334px;
  float: left;
  margin: 30px;
- border-radius: 5px;
+ border-radius: 1px;
 }
 
 
@@ -106,11 +114,48 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin-top: 4px;
+}
+
 body {
 /*background-image: url(file:///Users/BrianLambe/Downloads/logo.png);*/
-background-color: white;
+background-color: #f8f8f8;
 min-height: 100%;
 }
+
+/*nav bar start*/
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:700px) {
+  ul li:not(:first-child) {display: none;}
+  ul li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:700px) {
+  ul.responsive {position: relative;}
+  ul.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.responsive li a {
+    display: block;
+    text-align: left;
+    margin-left: 15px;
+  }
+}
+
 
 nav li {
   display: inline-block;
@@ -118,17 +163,14 @@ nav li {
   line-height: 70px; /*red box in navbar dimensions*/
   height: 70px; /*red box in navbar dimensions*/
   width: 130px;
-
 }
 
 nav ul {
   text-align: center;
   background-color: #005689; /*backgr color in navbar - was #ddd*/
-  /*margin-right: 100px;
-  margin-left: 100px;*/
-  margin-top: 0px;
-  border-radius: 15px;
+  border-radius: 3px;
   padding: 0; /*removes gap on left side of main nav*/
+  width: 100%;
 }
 
 nav a:hover {
@@ -153,12 +195,12 @@ nav a {
 
 ul.sub-menu{
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7); /*dropdown backroundcolor*/
+  background-color: white; /*dropdown backroundcolor was rgba(0, 0, 0, 0.7)*/
   list-style-type: none;
-  color: rgba(255, 255, 255, 0.7); /*dropdown font color*/
+  color: rgba(0, 0, 0, 0.8); /*dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
-  width: 129px;
+  width: 160px; /*was 129px*/
   padding-left: 0px;
   margin-left: 0px;
   padding-top: 0px;
@@ -166,8 +208,9 @@ ul.sub-menu{
   font-size: .7em;
   border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
-  transform: translateY(-4em); /* dropdown slide down animation start*/
-  z-index: -1;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  /*transform: translateY(-4em); /* dropdown slide down animation start*/
+  /*z-index: -1;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
 }
 
@@ -175,21 +218,23 @@ ul.sub-menu li{
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-
+  height: 50px;
+  border-radius: 0px;
 }
 
 ul.sub-menu li:hover {  /*dropdown menu hover*/
-  background-color: #666;
+  background-color: rgba(0, 0, 0, 0.2); /*was #666*/
   cursor: pointer;
-  border-radius: 5px;
-  width: 122px; /*width for dropdown hover*/
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
+  border-radius: 0px;
+  width: 155px; /*width for dropdown hover*/
+  /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
 }
 
 nav li:hover .sub-menu{
   visibility: visible;  /*makes dropdown appear when hovered*/
-  z-index: 1; /*dropdown slide animation start*/
-  transform: translateY(0%);
+  margin-left: 20px;
+  /*z-index: 1; /*dropdown slide animation start*/
+  /*transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s; /*allows you to hover on dropdown after animation --dropdown slide animation end*/
 }
 
@@ -204,4 +249,16 @@ footer{
   height: 3em;
   margin-top: 2em;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+/*span{  /*dropdown arrow */
+/*margin-left: -30px;
+width: 2px;
 }
