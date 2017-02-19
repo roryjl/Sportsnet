@@ -1,3 +1,36 @@
+/*underline animation for nav start*/
+li {
+  display: inline-block;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+li::after {
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: #ddd;
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+li:hover::after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #ddd;
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+/*underline animation for nav end*/
+
+
 @media only screen and (max-width: 1280px) {
 
     [class*="side"] {
@@ -200,7 +233,7 @@ ul.sub-menu{
   color: rgba(0, 0, 0, 0.8); /*dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
-  width: 160px; /*was 129px*/
+  width: 130px; /*was 129px*/
   padding-left: 0px;
   margin-left: 0px;
   padding-top: 0px;
@@ -215,24 +248,28 @@ ul.sub-menu{
 }
 
 ul.sub-menu li{
-  padding-left: 5px;
+  padding-left: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
   height: 50px;
   border-radius: 0px;
+  text-align: center;
 }
 
 ul.sub-menu li:hover {  /*dropdown menu hover*/
   background-color: rgba(0, 0, 0, 0.2); /*was #666*/
   cursor: pointer;
   border-radius: 0px;
-  width: 155px; /*width for dropdown hover*/
+  width: 120px; /*width for dropdown hover*/
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
   /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
 }
 
 nav li:hover .sub-menu{
   visibility: visible;  /*makes dropdown appear when hovered*/
-  margin-left: 20px;
+  margin-left: 0px; /*dropdown margin left*/
   /*z-index: 1; /*dropdown slide animation start*/
   /*transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s; /*allows you to hover on dropdown after animation --dropdown slide animation end*/
