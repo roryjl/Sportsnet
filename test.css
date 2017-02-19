@@ -3,6 +3,7 @@ li {
   display: inline-block;
   position: relative;
   border: 2px solid transparent;
+  color: #005689;
 }
 
 li::after {
@@ -15,7 +16,7 @@ li::after {
   top: 60px;
   left: 50%;
   -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /*these figures (0.5) control speed of animation*/
 }
 
 li:hover::after {
@@ -54,6 +55,7 @@ li:hover::after {
   top: 114px;
   position: absolute;
   right: 10px;
+  z-index: -1;
 }
 
 .main {
@@ -182,6 +184,7 @@ img {
 .text{
   /*background-color: black;*/
   text-align: center; /*centre aligns h2*/
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 807px) {
@@ -189,7 +192,6 @@ img {
     [class*="text"] {
         float: none;
         width: auto;
-
     }
 }
 
@@ -257,6 +259,7 @@ img {
 h1 {
   text-align: center;
   margin: 30px;
+  color: black;
 }
 
 @media only screen and (max-width: 575px) {
@@ -281,6 +284,12 @@ h2 {
 
 h3 {
   margin-top: 4px;
+  color: black;
+}
+
+a:link{ /*removes underline from h1 and h3*/
+  text-decoration: none!important;
+  cursor: pointer;
 }
 
 body {
@@ -288,6 +297,8 @@ body {
 background-color: #f8f8f8;
 min-height: 100%;
 }
+
+
 
 /*nav bar start*/
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
@@ -321,6 +332,21 @@ ul li.icon {display: none;}
   }
 }
 
+.navbar-left {  /*nav bar content (img/txt)*/
+  max-width: 100px;
+  max-height: 100px;
+  display: inline-block;
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.navbar-left-txt {
+  color: lightblue;
+  font-family: serif;
+  font-size: 1.2em;
+  margin-top: -4px;
+}
 
 nav li {
   display: inline-block;
@@ -328,6 +354,7 @@ nav li {
   line-height: 70px; /*red box in navbar dimensions*/
   height: 70px; /*red box in navbar dimensions*/
   width: 130px;
+  /*text-align: justify; - needed for img in nav*/
 }
 
 nav ul {
