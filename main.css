@@ -65,6 +65,14 @@ li:hover::after {
   overflow: hidden; /*doesnt allow img outside of div*/
   border-radius: 1px;
   box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1068px) {
+    /* For mobile phones: */
+    [class="main"] {
+        width: 90%;
+    }
 }
 
 .mainimg {
@@ -77,15 +85,33 @@ li:hover::after {
 .maintext {
   width: 400px;
   height: 90%;
-  margin: 10px;
-  /*background-color: black;*/
+  margin-top: -270px;
+  margin-right: 10px;
+  /*background-color: red;*/
   float: right;
+}
+
+@media only screen and (max-width: 1068px) {
+    /* For mobile phones: */
+    [class="maintext"] {
+        float: none;
+        margin-left: 400px;
+        width: auto;
+    }
 }
 
 img {
   max-width: 100%;
-  max-width: 100%;
+  max-height: 100%;
   text-align: center;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    img {
+
+
+    }
 }
 
 .first {
@@ -96,12 +122,30 @@ img {
   margin-top: 30px;
   margin: 30px;
   border-radius: 1px;
+  display: inline-block;
    /*overflow: hidden - doesnt allow img outside of div*/
+}
+
+@media only screen and (max-width: 1280px) {
+
+    [class*="first"] {
+        float: none;
+        width: 90%;
+    }
 }
 
 .text{
   /*background-color: black;*/
   text-align: center; /*centre aligns h2*/
+}
+
+@media only screen and (max-width: 1280px) {
+
+    [class*="text"] {
+        float: none;
+        width: auto;
+
+    }
 }
 
 .second {
@@ -113,6 +157,15 @@ img {
   text-align: center;
   margin: 30px;
   border-radius: 1px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    [class*="second"] {
+        float: none;
+        width: 90%;
+    }
 }
 
 .third{
@@ -124,6 +177,15 @@ img {
  margin: 30px;
  float: left;
  border-radius: 1px;
+ display: inline-block;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    [class*="third"] {
+        float: none;
+        width: 90%;
+    }
 }
 
 .fourth{
@@ -134,11 +196,18 @@ img {
  float: left;
  margin: 30px;
  border-radius: 1px;
+ display: inline-block;
 }
 
+@media only screen and (max-width: 1280px) {
+
+    [class*="fourth"] {
+        float: none;
+        width: 90%;
+    }
+}
 
 h1 {
-  float: right;
   text-align: center;
   margin: 30px;
 }
@@ -162,7 +231,7 @@ min-height: 100%;
 ul li.icon {display: none;}
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:700px) {
+@media screen and (max-width:712px) {
   ul li:not(:first-child) {display: none;}
   ul li.icon {
     float: right;
@@ -171,7 +240,7 @@ ul li.icon {display: none;}
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:700px) {
+@media screen and (max-width:712px) {
   ul.responsive {position: relative;}
   ul.responsive li.icon {
     position: absolute;
@@ -265,6 +334,13 @@ ul.sub-menu li:hover {  /*dropdown menu hover*/
   padding-bottom: 5px;
   padding-left: 0;
   /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
+}
+
+@media only screen and (max-width: 712px) {
+    /*hides dropdown when in mobile view*/
+    .sub-menu {
+       opacity: 0;
+    }
 }
 
 nav li:hover .sub-menu{
