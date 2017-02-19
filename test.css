@@ -151,6 +151,13 @@ img {
   text-align: center;
 }
 
+@media only screen and (max-width: 1047px) {
+
+    img {
+      margin-top: 20px;
+    }
+}
+
 .first {
   background-color: white; /*blue*/
   width: 30%;
