@@ -51,7 +51,7 @@ li:hover::after {
   width: 350px; /*was 400px*/
   height: 1047px;
   border-radius: 1px;
-  top: 92px;
+  top: 114px;
   position: absolute;
   right: 10px;
 }
@@ -71,7 +71,7 @@ li:hover::after {
 @media only screen and (max-width: 1068px) {
     /* For mobile phones: */
     [class="main"] {
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -80,6 +80,28 @@ li:hover::after {
   height: 90%;
   padding: 10px;
   /*background-color: black;*/
+}
+
+@media only screen and (max-width: 1047px) {
+
+    .mainimg {
+      width: 350px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .mainimg {
+      width: 300px;
+    }
+}
+
+@media only screen and (max-width: 633px) {
+
+    .mainimg {
+      width: 380px;
+      height: 200px;
+    }
 }
 
 .maintext {
@@ -95,8 +117,29 @@ li:hover::after {
     /* For mobile phones: */
     [class="maintext"] {
         float: none;
-        margin-left: 400px;
+        margin-left: 350px;
         width: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .maintext {
+      margin-left: 300px;
+    }
+}
+
+@media only screen and (max-width: 633px) {
+
+    .maintext {
+      margin-left: 250px;
+    }
+}
+
+@media only screen and (max-width: 577px) {
+
+    .maintext {
+      margin-left: 0;
     }
 }
 
@@ -104,14 +147,6 @@ img {
   max-width: 100%;
   max-height: 100%;
   text-align: center;
-}
-
-@media only screen and (max-width: 1280px) {
-
-    img {
-
-
-    }
 }
 
 .first {
@@ -123,10 +158,11 @@ img {
   margin: 30px;
   border-radius: 1px;
   display: inline-block;
+  text-align: center;
    /*overflow: hidden - doesnt allow img outside of div*/
 }
 
-@media only screen and (max-width: 712px) {
+@media only screen and (max-width: 807px) {
 
     [class*="first"] {
         float: none;
@@ -139,7 +175,7 @@ img {
   text-align: center; /*centre aligns h2*/
 }
 
-@media only screen and (max-width: 712px) {
+@media only screen and (max-width: 807px) {
 
     [class*="text"] {
         float: none;
@@ -160,7 +196,7 @@ img {
   display: inline-block;
 }
 
-@media only screen and (max-width: 712px) {
+@media only screen and (max-width: 807px) {
 
     [class*="second"] {
         float: none;
@@ -178,9 +214,10 @@ img {
  float: left;
  border-radius: 1px;
  display: inline-block;
+ text-align: center;
 }
 
-@media only screen and (max-width: 712px) {
+@media only screen and (max-width: 807px) {
 
     [class*="third"] {
         float: none;
@@ -197,9 +234,10 @@ img {
  margin: 30px;
  border-radius: 1px;
  display: inline-block;
+ text-align: center;
 }
 
-@media only screen and (max-width: 712px) {
+@media only screen and (max-width: 807px) {
 
     [class*="fourth"] {
         float: none;
@@ -210,6 +248,14 @@ img {
 h1 {
   text-align: center;
   margin: 30px;
+}
+
+@media only screen and (max-width: 577px) {
+
+    h1 {
+      margin-top: 260px;
+      font-size: 1.5em;
+    }
 }
 
 h2 {
