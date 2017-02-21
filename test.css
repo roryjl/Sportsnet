@@ -388,7 +388,7 @@ ul li.icon {
 }
 
   ul li.icon {
-    float: left; /*was right*/
+    float: right; /*was left*/
     display: inline-block;
     /*new start*/background-color: black;
     width: 15%;
