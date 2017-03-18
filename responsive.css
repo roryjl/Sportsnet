@@ -1,0 +1,506 @@
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:885px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+    background-color: black; /*icon background*/
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:885px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left; /*text align for nav options txt when mobile nav is opened*/
+    margin-left: 10px; /*margin left for nav options txt when mobile nav is opened, i added this*/
+  }
+}
+
+
+
+
+.navbar-left {  /*nav bar content (img/txt)*/
+  max-width: 100px;
+  max-height: 100px;
+  display: inline-block;
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.navbar-left-txt {
+  color: #068df6;
+  font-family: serif;
+  font-size: 1.2em;
+  margin-top: -4px;
+}
+
+@media screen and (max-width: 885px) {
+  .navbar-left-txt {
+   display: none;
+ }
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 70px; /*red box in navbar dimensions*/
+  height: 70px; /*red box in navbar dimensions*/
+  width: 130px;
+  /*text-align: justify; - needed for img in nav*/
+}
+
+@media screen and (max-width: 885px) {
+  nav li {
+   /*margin-left: -200px;   /*moves 'home'*/
+ }
+}
+
+nav ul {
+  text-align: center;
+  background-color: black; /*backgr color in navbar - was #005689*/
+  border-radius: 3px;
+  padding: 0; /*removes gap on left side of main nav*/
+  width: 100%;
+}
+
+nav a:hover {
+background-color: #068df6 /*mainnav backgr color hover - was #005689*/
+cursor: pointer;
+border-radius: 5px;
+color: lightgrey; /*text hover color main nav*/
+}
+
+nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc being hovered*/
+  background-color: #068df6; /*was #005689 (guardian blue) */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /*text color in mainnav - was black*/
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+}
+
+/*start of dropdown*/
+
+ul.sub-menu{
+  position: absolute;
+  background-color: #068df6; /*dropdown backroundcolor was white*/
+  list-style-type: none;
+  color: rgba(0, 0, 0, 0.8); /*dropdown font color was rgba(255, 255, 255, 0.7)*/
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
+  width: 130px; /*was 129px*/
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  visibility: hidden; /*hides dropdown when not hovered*/
+  font-size: .7em;
+  border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transform: translateY(-4em); /* dropdown slide down animation start*/
+  z-index: 10;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
+}
+
+ul.sub-menu li{
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 63px; /*height of dropdown*/
+  border-radius: 0px;
+  text-align: center;
+}
+
+ul.sub-menu li:hover {  /*dropdown menu hover*/
+  background-color: rgba(0, 0, 0, 0.1); /*was #666*/
+  cursor: pointer;
+  border-radius: 0px;
+  width: 120px; /*width for dropdown hover*/
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
+}
+
+@media only screen and (max-width: 712px) {
+    /*hides dropdown when in mobile view*/
+    .sub-menu {
+       opacity: 0;
+    }
+}
+
+nav li:hover .sub-menu{
+  visibility: visible;  /*makes dropdown appear when hovered*/
+  margin-left: 0px; /*dropdown margin left*/
+  z-index: 10; /*dropdown slide animation start*/
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /*allows you to hover on dropdown after animation --dropdown slide animation end*/
+}
+
+/*end of dropdown*/
+
+
+
+
+/*underline animation for nav start*/
+li {
+  display: inline-block;
+  position: relative;
+  border: 0px solid transparent;/*was 2px, gap between main nav and dropdown*/
+  color: #005689;
+}
+
+li::after {
+  width: 0%;
+  height: 2px; /*width of white animation line*/
+  display: block;
+  background-color: #ddd; /*line under(animation) color*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /*these figures (0.5) control speed of animation*/
+}
+
+li:hover::after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #ddd; /*line under(animation) color*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+/*underline animation for nav end*/
+
+
+
+/*hamburger mobile navbar icon*/
+.icon {
+  display: none;
+}
+/*icon end*/
+/*end of nav*/
+
+
+
+
+.mainimg { /*was just img*/
+  height: 350px;
+  width: 60%;
+}
+
+@media only screen and (max-width: 855px) {
+    /*hides dropdown when in mobile view*/
+    .mainimg {
+       height: 180%; /*250px*/
+       width: 100%; /*500px*/
+    }
+}
+
+@media only screen and (max-width: 533px) {
+    /*hides dropdown when in mobile view*/
+    .mainimg {
+       height: 160%; /*250px*/
+       width: 100%; /*500px*/
+    }
+}
+
+
+p {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+}
+
+.maintxt {
+  /*background-color: red;*/
+  height: 100%; /*100px*/
+  /*float: right;*/
+  margin-top: -30%;
+  margin-left: 64%;
+}
+
+@media only screen and (max-width: 855px) {
+    /*hides dropdown when in mobile view*/
+    .maintxt {
+       margin-left: 5%;
+       margin-top: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {
+  width: 77.5%;
+  background-color: white;
+  color: #ffffff;
+  margin-left: 10%;
+  height: 30%;
+}
+
+@media only screen and (max-width: 1051px) {
+    /* For mobile phones: */
+    [class="col-1"] {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 1036px) {
+    /* For mobile phones: */
+    [class="col-1"] {
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-1"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+    }
+}
+
+
+.col-2 {
+  width: 24.33%;
+  background-color: white;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 10%;
+  height: 50%;
+  clear: both;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-2"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 1036px) {
+    /* For mobile phones: */
+    [class="col-2"] {
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-2"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: 10px;
+        height: 23%;
+    }
+}
+
+
+
+.secimg {
+  width: 100%;
+  height: 60%;
+}
+
+
+
+.col-3 {
+  width: 24.33%;
+  background-color: white;
+  color: #ffffff;
+  margin-top: 30px;
+  display: inline-block;
+  height: 50%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-3"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-3"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: 10px;
+        height: 23%;
+    }
+}
+
+.col-4 {
+width: 24.33%;
+background-color: white;
+color: #ffffff;
+margin: 30px;
+display: inline-block;
+height: 50%;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-4"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-4"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: 10px;
+        height: 23%;
+    }
+}
+
+.col-5 {
+width: 24.33%;
+background-color: white;
+color: #ffffff;
+margin-top: 30px;
+margin-right: 30px;
+margin-left: 10%;
+display: inline-block;
+height: 50%;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-5"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 1036px) {
+    /* For mobile phones: */
+    [class="col-5"] {
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-5"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: -18px;
+        height: 23%;
+    }
+}
+
+.col-6 {
+width: 24.33%;
+background-color: white;
+color: #ffffff;
+margin-top: 30px;
+display: inline-block;
+height: 50%;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-6"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-6"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: 10px;
+        height: 23%;
+    }
+}
+
+.col-7 {
+width: 24.33%;
+background-color: white;
+color: #ffffff;
+margin: 30px;
+display: inline-block;
+height: 50%;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 1056px) {
+    /* For mobile phones: */
+    [class="col-7"] {
+        width: 27%;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    /* For mobile phones: */
+    [class="col-7"] {
+        width: 100%;
+        background-color: white;
+        margin-left: 1px;
+        margin-top: 10px;
+        height: 23%;
+    }
+}
+
+
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+    background-color: #ccc;
+}
