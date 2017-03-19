@@ -257,6 +257,12 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 318px) {
+    .maintxt {
+       font-size: 85%;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -370,7 +376,6 @@ h3 {
 
 .sectxt {
   color: black;
-  margin-left: 5%;
 }
 
 @media only screen and (max-width: 694px) {
@@ -407,7 +412,6 @@ h3 {
     }
 }
 
-
 /*@media only screen and (max-width: 500px) {
     [class="sectxt"] {
         margin-left: 3%;
@@ -433,9 +437,21 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 325px) {/*new*/
+@media only screen and (max-width: 388px) {/*new*/
     [class="sectxt"] {
         margin-top: 17%;
+    }
+}
+
+@media only screen and (max-width: 330px) {/*new*/
+    [class="sectxt"] {
+        margin-top: 18%;
+    }
+}
+
+@media only screen and (max-width: 315px) {/*new*/
+    [class="sectxt"] {
+        margin-top: 19%;
     }
 }
 
