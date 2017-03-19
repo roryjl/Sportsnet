@@ -433,9 +433,9 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 320px) {/*new*/
+@media only screen and (max-width: 325px) {/*new*/
     [class="sectxt"] {
-        margin-top: 16%;
+        margin-top: 20%;
     }
 }
 
