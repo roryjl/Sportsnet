@@ -409,7 +409,7 @@ h3 {
 
 @media only screen and (max-width: 320px) {/*new*/
     [class="sectxt"] {
-        margin-top: 18%;
+        margin-top: 50%;
     }
 }
 
