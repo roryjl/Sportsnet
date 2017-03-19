@@ -433,6 +433,12 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 320px) {/*new*/
+    [class="sectxt"] {
+        margin-top: 16%;
+    }
+}
+
 .group {
   color: skyblue;
   margin-left: 5%;
