@@ -802,9 +802,10 @@ html {
 a:link{ /*removes underline from links*/
   text-decoration: none!important;
   cursor: pointer;
+  color: inherit!important;
 }
 
 a:visited { /*removes purple txt color from links*/
    text-decoration: none;
-   color: black; /*was inherit as on atom*/
+   color: inherit;
 }
