@@ -802,6 +802,7 @@ html {
 a:link{ /*removes underline from links*/
   text-decoration: none!important;
   cursor: pointer;
+  color: inherit;
 }
 
 a:visited { /*removes purple txt color from links*/
