@@ -75,6 +75,12 @@ nav ul {
   width: 100%;
 }
 
+@media screen and (max-width: 885px) {
+  nav ul {
+   border-radius: 0px; /*needs to be removed because hamburger icon has no border-radius*/
+ }
+}
+
 nav a:hover {
 background-color: #068df6 /*mainnav backgr color hover - was #005689*/
 cursor: pointer;
@@ -285,10 +291,11 @@ h3 {
   height: 30%;
 }
 
-@media only screen and (max-width: 1051px) {
+@media only screen and (max-width: 1174px) { /*1056px*/
     /* For mobile phones: */
     [class="col-1"] {
         width: 87%;
+        margin-left: 6.5%;
     }
 }
 
@@ -296,6 +303,21 @@ h3 {
     /* For mobile phones: */
     [class="col-1"] {
         margin-left: 1%;
+        width: 95.5%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
+    .col-1 {
+       margin-left: 3%;
+       width: 94%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    /*hides dropdown when in mobile view*/
+    .col-1 {
+       height: 40%;
     }
 }
 
@@ -321,25 +343,34 @@ h3 {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-2"] {
         width: 27%;
+        margin-left: 6.5%;
     }
 }
 
 @media only screen and (max-width: 1036px) {
-    /* For mobile phones: */
     [class="col-2"] {
         margin-left: 1%;
+        width: 30.5%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 915px) {
+    [class="col-2"] {
+        width: 46%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-2"] {
-        width: 41.4%;
-        height: 55%;
+        width: 46%;
+        height: 57%;
+        margin-left: 3%;
     }
 }
 
@@ -376,6 +407,8 @@ h3 {
 
 .sectxt {
   color: black;
+  margin-left: 5%;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 694px) {
@@ -486,18 +519,31 @@ h3 {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-3"] {
         width: 27%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 1036px) {
+    [class="col-3"] {
+        width: 30.5%;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    [class="col-3"] {
+        width: 46%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-3"] {
-        width: 42%;
-        height: 55%;
+        width: 46%;
+        height: 57%;
     }
 }
 
@@ -523,19 +569,33 @@ height: 50%;
 overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-4"] {
         width: 27%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 1036px) {
+    [class="col-4"] {
+        width: 30.5%;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    [class="col-4"] {
+        width: 46%;
+        height: 60%;
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-4"] {
-        width: 41.4%;
-        height: 55%;
-        margin-left: 1%;
+        width: 46%;
+        height: 57%;
+        margin-left: 3%;
     }
 }
 
@@ -562,10 +622,11 @@ height: 50%;
 overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-5"] {
         width: 27%;
+        margin-left: 6.5%;
     }
 }
 
@@ -573,14 +634,23 @@ overflow: hidden;
     /* For mobile phones: */
     [class="col-5"] {
         margin-left: 1%;
+        width: 30.5%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 915px) {
+    [class="col-5"] {
+        width: 46%;
+        height: 60%;
+        margin-left: -1%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-5"] {
-        width: 42%;
-        height: 55%;
+        width: 46%;
+        height: 57%;
         margin-left: -1%;
     }
 }
@@ -607,19 +677,33 @@ height: 50%;
 overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-6"] {
         width: 27%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 1036px) {
+    [class="col-6"] {
+        width: 30.5%;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    [class="col-6"] {
+        width: 46%;
+        height: 60%;
+        margin-left: 1%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-6"] {
-        width: 41.4%;
-        height: 55%;
-        margin-left: 1%;
+        width: 46%;
+        height: 57%;
+        margin-left: 3%;
     }
 }
 
@@ -644,18 +728,31 @@ height: 50%;
 overflow: hidden;
 }
 
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1174px) {
     /* For mobile phones: */
     [class="col-7"] {
         width: 27%;
     }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 1036px) {
+    [class="col-7"] {
+        width: 30.5%;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    [class="col-7"] {
+        width: 46%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 859px) {
     /* For mobile phones: */
     [class="col-7"] {
-        width: 42%;
-        height: 55%;
+        width: 46%;
+        height: 57%;
     }
 }
 
