@@ -276,7 +276,7 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 427px) {
     .maintxt {
        margin-top: -5%;
     }
@@ -352,18 +352,6 @@ h3 {
 @media only screen and (max-width: 595px) {
     .col-1 {
         height: 70%; /*jw 35%*/
-    }
-}
-
-@media only screen and (max-width: 495px) {
-    .col-1 {
-        height: 60%; /*jw 30%*/
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .col-1 {
-        height: 50%; /*jw 35%*/
     }
 }
 
