@@ -809,6 +809,6 @@ a:visited { /*removes purple txt color from links*/
    color: inherit;
 }
 
-a:.sectxt {
+a .sectxt {
   color: black;
 }
