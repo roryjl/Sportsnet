@@ -812,3 +812,7 @@ a:visited { /*removes purple txt color from links*/
 a {
   color: black;
 }
+
+a.footsec {
+  color: #068df6;
+}
