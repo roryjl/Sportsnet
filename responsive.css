@@ -809,6 +809,6 @@ a:visited { /*removes purple txt color from links*/
    color: inherit;
 }
 
-a h3 {
+a {
   color: black;
 }
