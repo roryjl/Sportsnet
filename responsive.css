@@ -208,7 +208,7 @@ li:hover::after {
 
 
 
-.mainimg { /*was just img*/
+.mainimg {
   height: 350px;
   width: 60%;
 }
@@ -216,16 +216,16 @@ li:hover::after {
 @media only screen and (max-width: 855px) {
     /*hides dropdown when in mobile view*/
     .mainimg {
-       height: 180%; /*250px*/
-       width: 100%; /*500px*/
+       height: 80%; /*jw 180%*/
+       width: 100%;
     }
 }
 
 @media only screen and (max-width: 533px) {
     /*hides dropdown when in mobile view*/
     .mainimg {
-       height: 160%; /*250px*/
-       width: 100%; /*500px*/
+       height: 80%; /*jw 160%*/
+       width: 100%;
     }
 }
 
@@ -251,16 +251,34 @@ h3 {
 }
 
 @media only screen and (max-width: 855px) {
-    /*hides dropdown when in mobile view*/
     .maintxt {
        margin-left: 5%;
        margin-top: 0;
+       margin-top: 4%;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .maintxt {
+       margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 446px) {
+    .maintxt {
+       font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 427px) {
+    .maintxt {
+       margin-top: -2%;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .maintxt {
-       margin-top: -10;
+       margin-top: -5%;
     }
 }
 
@@ -289,7 +307,7 @@ h3 {
   background-color: white;
   color: #ffffff;
   margin-left: 10%;
-  height: 30%;
+  height: 60%;
 }
 
 @media only screen and (max-width: 1174px) { /*1056px*/
@@ -318,7 +336,7 @@ h3 {
 @media only screen and (max-width: 855px) {
     /*hides dropdown when in mobile view*/
     .col-1 {
-       height: 40%;
+       height: 80%; /*jw 40%*/
     }
 }
 
@@ -333,19 +351,19 @@ h3 {
 
 @media only screen and (max-width: 595px) {
     .col-1 {
-        height: 35%;
+        height: 70%; /*jw 35%*/
     }
 }
 
 @media only screen and (max-width: 495px) {
     .col-1 {
-        height: 30%;
+        height: 60%; /*jw 30%*/
     }
 }
 
 @media only screen and (max-width: 400px) {
     .col-1 {
-        height: 25%;
+        height: 50%; /*jw 35%*/
     }
 }
 
@@ -472,6 +490,7 @@ h3 {
 @media only screen and (max-width: 342px) {
     [class="sectxt"] {
         margin-top: 15%;
+        font-size: 90%;
     }
 }
 
