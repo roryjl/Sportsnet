@@ -809,10 +809,10 @@ a:visited { /*removes purple txt color from links*/
    color: inherit;
 }
 
-a {
+/*a {
   color: black;
-}
+}*/
 
-a:p {
+.footsec a {
   color: #068df6;
 }
