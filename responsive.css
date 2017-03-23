@@ -428,84 +428,70 @@ h3 {
   color: black;
   margin-left: 5%;
   text-decoration: none;
+  margin-top: 9%;
 }
 
 @media only screen and (max-width: 694px) {
     [class="sectxt"] {
-        /*float: left;*/
-        /*margin-left: -9.5%;*/
-        /*margin-top: 5%;*/
+        margin-top: 7%;
+        margin-left: 32.8%; /*did use float here but causes issues with text responsiveness, needs different margins*/
+    }
+}
+
+@media only screen and (max-width: 631px) {
+    [class="sectxt"] {
+        margin-top: 8%;
+    }
+}
+
+@media only screen and (max-width: 544px) {
+    [class="sectxt"] {
         margin-top: 9%;
-        margin-left: 32.8%;
     }
 }
 
-/*@media only screen and (max-width: 586px) {
-    [class="sectxt"] {
-        margin-left: -12%;
-    }
-}*/
-
-@media only screen and (max-width: 598px) {/*new*/
-    [class="sectxt"] {
-        margin-top: 10%;
-    }
-}
-
-@media only screen and (max-width: 544px) {/*new*/
-    [class="sectxt"] {
-        margin-top: 12%;
-    }
-}
-
-@media only screen and (max-width: 530px) {/*new*/
+@media only screen and (max-width: 530px) {
     [class="sectxt"] {
         margin-left: 46.8%;
     }
 }
 
-/*@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 488px) {
     [class="sectxt"] {
-        margin-left: 3%;
-        margin-top: 0%;
+        font-size: 95%;
+        margin-top: 11%;
     }
-}*/
+}
 
-@media only screen and (max-width: 464px) {/*new*/
+@media only screen and (max-width: 435px) {
     [class="sectxt"] {
         margin-top: 13%;
     }
 }
 
-@media only screen and (max-width: 435px) {/*new*/
+@media only screen and (max-width: 342px) {
     [class="sectxt"] {
-        margin-top: 14%;
+        margin-top: 15%;
     }
 }
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 315px) {
     [class="sectxt"] {
-        font-size: 95%;
+        margin-top: 16%;
     }
 }
 
-@media only screen and (max-width: 388px) {/*new*/
-    [class="sectxt"] {
-        margin-top: 17%;
-    }
+@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
+  .sectxt {
+    font-size: 85%;
+    margin-top: 20%;
+  }
 }
 
-@media only screen and (max-width: 330px) {/*new*/
-    [class="sectxt"] {
-        margin-top: 18%;
-    }
+p.footsec { /*fixes issue with sectxt going too far down, see in developer tools*/
+  height: 5px;
 }
 
-@media only screen and (max-width: 315px) {/*new*/
-    [class="sectxt"] {
-        margin-top: 19%;
-    }
-}
 
 .footsec {
   color: skyblue;
@@ -524,6 +510,13 @@ h3 {
     [class="footsec"] {
         font-size: 90%;
     }
+}
+
+@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
+  .footsec {
+    font-size: 85%;
+    margin-top: 8%;
+  }
 }
 
 
@@ -795,14 +788,13 @@ overflow: hidden;
 
 html {
     font-family: "Lucida Sans", sans-serif;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.2);
 }
 
 
 a:link{ /*removes underline from links*/
   text-decoration: none!important;
   cursor: pointer;
-  color: inherit!important;
 }
 
 a:visited { /*removes purple txt color from links*/
