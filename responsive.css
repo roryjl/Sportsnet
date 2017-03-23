@@ -808,3 +808,7 @@ a:visited { /*removes purple txt color from links*/
    text-decoration: none;
    color: inherit;
 }
+
+a.sectxt {
+  color: black;
+}
