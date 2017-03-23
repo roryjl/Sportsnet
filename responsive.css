@@ -282,6 +282,12 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 427px) and (max-height: 460px) {
+    .maintxt {
+       margin-top: -7%;
+    }
+}
+
 @media only screen and (max-width: 318px) {
     .maintxt {
        font-size: 85%;
@@ -349,12 +355,6 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 595px) {
-    .col-1 {
-        height: 70%; /*jw 35%*/
-    }
-}
-
 
 .col-2 {
   width: 24.33%;
@@ -406,7 +406,7 @@ h3 {
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
@@ -573,7 +573,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
@@ -625,7 +625,7 @@ overflow: hidden;
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
@@ -681,7 +681,7 @@ overflow: hidden;
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
@@ -733,7 +733,7 @@ overflow: hidden;
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
@@ -782,7 +782,7 @@ overflow: hidden;
         background-color: white;
         margin-left: 1px;
         margin-top: 10px;
-        height: 23%;
+        height: 27%;
     }
 }
 
