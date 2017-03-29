@@ -428,6 +428,12 @@ h3 {
   height: 60%;
 }
 
+@media only screen and (max-width: 768px) and (max-height: 928px) {
+    .secimg {
+       height: 60%;
+    }
+}
+
 @media only screen and (max-width: 694px) {
     [class="secimg"] {
         width: 30%;
