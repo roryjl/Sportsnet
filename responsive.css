@@ -224,11 +224,10 @@ li:hover::after {
 @media only screen and (max-width: 533px) {
     /*hides dropdown when in mobile view*/
     .mainimg {
-       height: 80%; /*jw 160%*/
+       height: 75%; /*was 80% paddding*/
        width: 100%;
     }
 }
-
 
 p {
   color: black;
@@ -244,8 +243,7 @@ h3 {
 
 .maintxt {
   /*background-color: red;*/
-  height: 100%; /*100px*/
-  /*float: right; made text not responsive*/
+  width: 35%;
   margin-top: -30%;
   margin-left: 64%;
 }
@@ -255,6 +253,7 @@ h3 {
        margin-left: 5%;
        margin-top: 0;
        margin-top: 4%;
+       width: 90%;
     }
 }
 
@@ -284,7 +283,7 @@ h3 {
 
 @media only screen and (max-width: 427px) and (max-height: 460px) {
     .maintxt {
-       margin-top: -7%;
+       margin-top: -6%; /*was -7% paddding*/
     }
 }
 
@@ -315,6 +314,7 @@ h3 {
   margin-left: 10%;
   height: 60%;
   overflow: hidden;
+  box-shadow: 0px 2px 2px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) { /*1056px*/
@@ -359,6 +359,7 @@ h3 {
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .col-1 {
        height: 60%;
+       padding: 0px; /*need because col-*: paddding 15px*/
     }
 }
 
@@ -902,7 +903,7 @@ html {
 
 @media only screen and (max-width: 320px) {
     html {
-      background-color: rgba(0,0,0,0.1);
+      background-color: rgba(0,0,0,0.2);
     }
 }
 
@@ -922,4 +923,15 @@ a:visited { /*removes purple txt color from links*/
 
 .footsec a {
   color: #068df6;
+}
+
+
+html, body { /*fixes issue with quirks mode and doctype*/
+  width: 100%;
+  height: 100%;
+}
+
+div { /*fixes issue with quirks mode and doctype*/
+  width: 100%;
+  height: 100%;
 }
