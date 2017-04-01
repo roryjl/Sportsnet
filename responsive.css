@@ -900,6 +900,12 @@ html {
     background-color: rgba(0,0,0,0.2);
 }
 
+@media only screen and (max-width: 320px) {
+    html {
+      background-color: rgba(0,0,0,0.1);
+    }
+}
+
 a:link{ /*removes underline from links*/
   text-decoration: none!important;
   cursor: pointer;
