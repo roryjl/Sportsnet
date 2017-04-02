@@ -29,6 +29,11 @@
 
 
 
+/*.webtitle {
+  width: 1%;
+  height: 10px;
+}*/
+
 
 .navbar-left {  /*nav bar content (img/txt)*/
   max-width: 100px;
@@ -49,6 +54,16 @@
 @media screen and (max-width: 885px) {
   .navbar-left-txt {
    display: none;
+ }
+}
+
+.topnav {
+  margin-left: -0.7%;
+}
+
+@media screen and (max-width: 694px) {
+  .topnav {
+   margin-left: -2.4%;
  }
 }
 
@@ -259,7 +274,7 @@ h3 {
 
 @media only screen and (max-width: 799px) {
     .maintxt {
-       margin-top: 5%;
+       margin-top: -1%;
     }
 }
 
@@ -271,25 +286,20 @@ h3 {
 
 @media only screen and (max-width: 427px) {
     .maintxt {
-       margin-top: -2%;
+       margin-top: 5%;
     }
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 427px) and (max-height: 460px) {
     .maintxt {
-       margin-top: -5%;
-    }
-}
-
-@media only screen and (max-width: 427px) and (max-height: 492px) {
-    .maintxt {
-       margin-top: -6%; /*was -7% paddding*/
+       margin-top: -3%; /*was -7% paddding*/
     }
 }
 
 @media only screen and (max-width: 320px) {
     .maintxt {
        font-size: 85%;
+       margin-top: -6%;
     }
 }
 
@@ -335,7 +345,7 @@ h3 {
 
 @media only screen and (max-width: 859px) {
     .col-1 {
-       margin-left: 3%;
+       margin-left: 2%;
        width: 94%;
     }
 }
@@ -352,7 +362,8 @@ h3 {
     [class="col-1"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;/*margin-left: 1px;*/
+        padding: 0px;
     }
 }
 
@@ -360,6 +371,7 @@ h3 {
     .col-1 {
        height: 60%;
        padding: 0px; /*need because col-*: paddding 15px*/
+       margin-left: -2.4%;
     }
 }
 
@@ -403,7 +415,7 @@ h3 {
     [class="col-2"] {
         width: 46%;
         height: 57%;
-        margin-left: 3%;
+        margin-left: 2%;
     }
 }
 
@@ -417,7 +429,6 @@ h3 {
     .col-2 {
       width: 46%;
       height: 57%;
-      margin-left: 3%;
     }
 }
 
@@ -426,7 +437,7 @@ h3 {
     [class="col-2"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;/*margin-left: 1px;*/
         margin-top: 10px;
         height: 27%;
     }
@@ -517,16 +528,21 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .sectxt {
+       margin-top: 9%;
+    }
+}
+
 @media only screen and (max-width: 315px) {
     [class="sectxt"] {
-        margin-top: 16%;
+        margin-top: 10%;
     }
 }
 
 @media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
   .sectxt {
     font-size: 85%;
-    margin-top: 20%;
   }
 }
 
@@ -554,10 +570,15 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
     }
 }
 
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .footsec {
+       margin-top: 1%;
+    }
+}
+
 @media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
   .footsec {
     font-size: 85%;
-    margin-top: 8%;
   }
 }
 
@@ -619,7 +640,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
     [class="col-3"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;/*margin-left: 1px;*/
         margin-top: 10px;
         height: 27%;
     }
@@ -662,7 +683,7 @@ overflow: hidden;
     [class="col-4"] {
         width: 46%;
         height: 57%;
-        margin-left: 3%;
+        margin-left: 2%;
     }
 }
 
@@ -676,7 +697,6 @@ overflow: hidden;
     .col-4 {
       width: 46%;
       height: 57%;
-      margin-left: 3%;
     }
 }
 
@@ -685,7 +705,7 @@ overflow: hidden;
     [class="col-4"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;
         margin-top: 10px;
         height: 27%;
     }
@@ -755,7 +775,7 @@ overflow: hidden;
     [class="col-5"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;
         margin-top: 10px;
         height: 27%;
     }
@@ -798,7 +818,7 @@ overflow: hidden;
     [class="col-6"] {
         width: 46%;
         height: 57%;
-        margin-left: 3%;
+        margin-left: 2%;
     }
 }
 
@@ -812,7 +832,6 @@ overflow: hidden;
     .col-6 {
       width: 46%;
       height: 57%;
-      margin-left: 3%;
     }
 }
 
@@ -821,7 +840,7 @@ overflow: hidden;
     [class="col-6"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;
         margin-top: 10px;
         height: 27%;
     }
@@ -883,7 +902,7 @@ overflow: hidden;
     [class="col-7"] {
         width: 100%;
         background-color: white;
-        margin-left: 1px;
+        margin-left: -2.4%;
         margin-top: 10px;
         height: 27%;
     }
