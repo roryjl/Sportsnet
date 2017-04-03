@@ -2,7 +2,7 @@
 @media screen and (max-width:885px) {
   ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
-    float: right;
+    float: right; /*hamburger icon float*/
     display: inline-block;
     background-color: #068df6; /*icon background*/
   }
@@ -29,11 +29,29 @@
 
 
 
-/*.webtitle {
-  width: 1%;
-  height: 10px;
-}*/
+.webtitle { /*img in nav*/
+  background-image: url(http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg);
+  background-position: center;
+  width: 129px;
+  height: 70px;
+  background-size: 400px; /*was 80px*/
+}
 
+@media screen and (max-width: 885px) { /*img in nav*/
+  .webtitle {
+   margin-left: 45%;
+ }
+}
+
+@media screen and (max-width: 390px) { /*img in nav*/
+  .webtitle {
+   margin-left: -20%;
+ }
+}
+
+.navimgtxt { /*txt in nav img*/
+  color: rgba(0, 0, 0, 0, 0.1);
+}
 
 .navbar-left {  /*nav bar content (img/txt)*/
   max-width: 100px;
@@ -57,7 +75,7 @@
  }
 }
 
-.topnav {
+.topnav {  /*main nav positioning*/
   margin-left: -0.7%;
 }
 
