@@ -4,7 +4,7 @@
   ul.topnav li.icon {
     float: right; /*hamburger icon float*/
     display: inline-block;
-    background-color: #068df6; /*icon background*/
+    background-color: #04C5FF; /*icon background was #068df6*/
   }
 }
 
@@ -103,7 +103,7 @@ nav li {
 
 nav ul {
   text-align: center;
-  background-color: #068df6; /*backgr color in navbar - was black*/
+  background-color: #04C5FF; /*backgr color in navbar - was #068df6*/
   border-radius: 3px;
   padding: 0; /*removes gap on left side of main nav*/
   width: 100%;
@@ -116,14 +116,14 @@ nav ul {
 }
 
 nav a:hover {
-background-color: #068df6 /*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was #005689*/
+background-color: #04C5FF/*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was  #068df6*/
 cursor: pointer;
 border-radius: 5px;
-color: lightgrey; /*text hover color main nav*/
+color: rgba(0,0,0,0.1); /*text hover color main nav*/
 }
 
 nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc being hovered*/
-  background-color: #068df6; /*was #005689 (guardian blue) */
+  background-color: #04C5FF; /*was #068df6 */
 }
 
 nav a {
@@ -137,7 +137,7 @@ nav a {
 
 ul.sub-menu{
   position: absolute;
-  background-color: #068df6; /*dropdown backroundcolor was white*/
+  background-color: #04C5FF; /*dropdown backroundcolor was #068df6 before logo*/
   list-style-type: none;
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
@@ -279,6 +279,8 @@ h3 {
   width: 35%;
   margin-top: -30%;
   margin-left: 64%;
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: small-caps;
 }
 
 @media only screen and (max-width: 855px) {
@@ -453,11 +455,12 @@ h3 {
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-2"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;/*margin-left: 1px;*/
+        margin-left: 0;/*margin-left: -2.4%;*/
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
@@ -472,7 +475,7 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 767px) { /*new*/
+@media only screen and (max-width: 767px) {
     .secimg {
       width: 100%;
       height: 60%;
@@ -482,7 +485,7 @@ h3 {
 @media only screen and (max-width: 694px) {
     [class="secimg"] {
         width: 30%;
-        height: 90%;
+        height: 100%; /*was90%*/
         float: left;
     }
 }
@@ -499,6 +502,8 @@ h3 {
   margin-left: 5%;
   text-decoration: none;
   margin-top: 9%;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
 }
 
 @media only screen and (max-width: 694px) {
@@ -572,6 +577,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 .footsec {
   color: skyblue;
   margin-left: 5%;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 @media only screen and (max-width: 694px) {
@@ -656,11 +662,12 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-3"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;/*margin-left: 1px;*/
+        margin-left: 0;
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
@@ -721,11 +728,12 @@ overflow: hidden;
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-4"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;
+        margin-left: 0;
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
@@ -791,11 +799,12 @@ overflow: hidden;
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-5"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;
+        margin-left: 0;
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
@@ -856,11 +865,12 @@ overflow: hidden;
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-6"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;
+        margin-left: 0;
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
@@ -918,11 +928,12 @@ overflow: hidden;
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-7"] {
-        width: 100%;
+        width: 97%;
         background-color: white;
-        margin-left: -2.4%;
+        margin-left: 0;
         margin-top: 10px;
         height: 27%;
+        padding: 0;
     }
 }
 
