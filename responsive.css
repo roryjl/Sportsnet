@@ -218,9 +218,46 @@ li::after {
   transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /*these figures (0.5) control speed of animation*/
 }
 
+@media only screen and (max-width: 885px) {  /*to remove underline animation from hamburger*/
+    li::after {
+      -webkit-transition: left 0s cubic-bezier(0,0,0,0), width 0s cubic-bezier(0, 0, 0, 0);
+      transition: left 0s cubic-bezier(0, 0, 0, 0), width 0s cubic-bezier(0, 0, 0, 0);
+    }
+}
+
 li:hover::after {
   width: 100%;
   height: 2px;
+  display: block;
+  background-color: #ddd; /*line under(animation) color*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+@media only screen and (max-width: 885px) {  /*to remove underline animation from hamburger*/
+    li:hover::after {
+      width: 0%;
+      height: 0px;
+      display: block;
+      background-color: #ddd; /*line under(animation) color*/
+      content: " ";
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+}
+
+
+.navimgtxt::after {  /*to remove underline animation from logo*/
+  -webkit-transition: left 0s cubic-bezier(0,0,0,0), width 0s cubic-bezier(0, 0, 0, 0);
+  transition: left 0s cubic-bezier(0, 0, 0, 0), width 0s cubic-bezier(0, 0, 0, 0);
+}
+
+.navimgtxt:hover::after { /*to remove underline animation from logo*/
+  width: 0%;
+  height: 0px;
   display: block;
   background-color: #ddd; /*line under(animation) color*/
   content: " ";
@@ -993,6 +1030,6 @@ div { /*fixes issue with quirks mode and doctype*/
     height: 3em;
     margin-top: -3em;
     text-align: center;
-    background-color: lightblue;
-    padding: 5px;
+    background-color: #04C5FF;
+    padding: 1px;
 }
