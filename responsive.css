@@ -30,11 +30,12 @@
 
 
 .webtitle { /*img in nav*/
-  background-image: url(http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg);
+  background-image: url(/Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg ); /*http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg*/
   background-position: center;
   width: 129px;
   height: 70px;
   background-size: 400px; /*was 80px*/
+  image-resolution: 72dpi;
 }
 
 @media screen and (max-width: 885px) { /*img in nav*/
@@ -50,7 +51,7 @@
 }
 
 .navimgtxt { /*txt in nav img*/
-  color: rgba(0, 0, 0, 0, 0.1);
+  color: #F4F3F9;
 }
 
 .navbar-left {  /*nav bar content (img/txt)*/
@@ -143,7 +144,8 @@ ul.sub-menu{
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
-  width: 130px; /*was 129px*/
+  width: 124px;
+  height: 220px; /*defines height of dropdown, new- wasnt always here*/
   padding-left: 0px;
   margin-left: 0px;
   padding-top: 0px;
@@ -161,7 +163,7 @@ ul.sub-menu li{
   padding-left: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
-  height: 63px; /*height of dropdown*/
+  height: 63px; /*height of dropdown li*/
   border-radius: 0px;
   text-align: center;
 }
@@ -1032,4 +1034,6 @@ div { /*fixes issue with quirks mode and doctype*/
     text-align: center;
     background-color: #04C5FF;
     padding: 1px;
+    margin-left: -1%;
+    width: 101%;
 }
