@@ -30,7 +30,7 @@
 
 
 .webtitle { /*img in nav*/
-  background-image: url(/Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg ); /*http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg*/
+  background-image: url(http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg); /*/Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg */
   background-position: center;
   width: 129px;
   height: 70px;
