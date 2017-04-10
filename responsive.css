@@ -54,6 +54,12 @@
   color: #F4F3F9;
 }
 
+@media screen and (max-width: 885px) { /*img in nav*/
+  .navimgtxt {
+   font-size: 1%;
+ }
+}
+
 .navbar-left {  /*nav bar content (img/txt)*/
   max-width: 100px;
   max-height: 100px;
@@ -282,7 +288,7 @@ li:hover::after {
 
 
 .mainimg {
-  height: 95%; /*was 350px*/
+  height: 100%;
   width: 60%;
 }
 
@@ -385,6 +391,7 @@ h3 {
   height: 60%;
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
+  padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
 }
 
 @media only screen and (max-width: 1174px) { /*1056px*/
@@ -446,6 +453,7 @@ h3 {
   height: 50%;
   clear: both;
   overflow: hidden;
+  padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -656,6 +664,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
   display: inline-block;
   height: 50%;
   overflow: hidden;
+  padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -720,6 +729,7 @@ margin-right: 3%; /*23px*/
 display: inline-block;
 height: 50%;
 overflow: hidden;
+padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -787,6 +797,7 @@ margin-left: 10%;
 display: inline-block;
 height: 50%;
 overflow: hidden;
+padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -857,6 +868,7 @@ margin-right: 2%;
 display: inline-block;
 height: 50%;
 overflow: hidden;
+padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -923,6 +935,7 @@ display: inline-block;
 height: 50%;
 overflow: hidden;
 margin-bottom: 1%; /*for footer*/
+padding: 0.3%; /*to make img fit full div side*/
 }
 
 @media only screen and (max-width: 1174px) {
@@ -986,8 +999,8 @@ margin-bottom: 1%; /*for footer*/
 .col-12 {width: 100%;}
 
 html {
-    font-family: "Lucida Sans", sans-serif;
-    background-color: rgba(0,0,0,0.2);
+    font-family: "Ubuntu", sans-serif;
+    background-color: rgba(0,0,0,0.1);
 }
 
 @media only screen and (max-width: 320px) {
