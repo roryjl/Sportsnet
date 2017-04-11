@@ -30,11 +30,11 @@
 
 
 .webtitle { /*img in nav*/
-  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/3a/6f/26/3a6f2651cd008f7e4caafefcc86870b5.jpg); /*/Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg */
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/3a/6f/26/3a6f2651cd008f7e4caafefcc86870b5.jpg);/*url(/Users/BrianLambe/Downloads/oie_transparent.png); /*url(http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg)*/ /* /Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg */
   background-position: center;
   width: 129px;
   height: 70px;
-  background-size: 400px; /*was 80px*/
+  background-size: 150px; /*was 400px*/
   image-resolution: 72dpi;
 }
 
@@ -84,11 +84,12 @@
 
 .topnav {  /*main nav positioning*/
   margin-left: -0.7%;
+  width: 100.7%;
 }
 
 @media screen and (max-width: 694px) {
   .topnav {
-   margin-left: -2.4%;
+   margin-left: -1%;
  }
 }
 
@@ -126,7 +127,7 @@ nav ul {
 nav a:hover {
 background-color: #04C5FF/*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was  #068df6*/
 cursor: pointer;
-border-radius: 5px;
+border-radius: 0px; /*was 5px*/
 /*color: rgba(0,0,0,0.1); text hover color main nav*/
 }
 
@@ -150,7 +151,7 @@ ul.sub-menu{
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
-  width: 124px;
+  width: 130px; /*was 124px*/
   height: 220px; /*defines height of dropdown, new- wasnt always here*/
   padding-left: 0px;
   margin-left: 0px;
@@ -159,7 +160,7 @@ ul.sub-menu{
   font-size: .7em;
   border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid #414143;
   transform: translateY(-4em); /* dropdown slide down animation start*/
   z-index: 10;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
@@ -178,7 +179,7 @@ ul.sub-menu li:hover {  /*dropdown menu hover*/
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 0px;
-  width: 120px; /*width for dropdown hover*/
+  width: 128px; /*width for dropdown hover*/
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 0;
@@ -217,12 +218,12 @@ li::after {
   width: 0%;
   height: 2px; /*width of white animation line*/
   display: block;
-  background-color: #ddd; /*line under(animation) color*/
+  background-color: #fff; /*line under(animation) color*/
   content: " ";
   position: absolute;
   top: 60px;
   left: 50%;
-  -webkit-transition: left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /*these figures (0.5) control speed of animation*/
 }
 
@@ -372,6 +373,7 @@ h3 {
 * {
     box-sizing: border-box;
 }
+
 .row::after {
     content: "";
     clear: both;
@@ -380,7 +382,7 @@ h3 {
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    padding: 0px; /*was 15px*/
 }
 
 .col-1 {
@@ -392,6 +394,10 @@ h3 {
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
+}
+
+.col-1:hover {
+  box-shadow: 0px 8px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) { /*1056px*/
@@ -425,11 +431,10 @@ h3 {
 }
 
 @media only screen and (max-width: 694px) {
-    /* For mobile phones: */
     [class="col-1"] {
         width: 100%;
         background-color: white;
-        margin-left: -2.4%;/*margin-left: 1px;*/
+        margin-left: -1.2%;/*margin-left: 1px;*/
         padding: 0px;
     }
 }
@@ -453,7 +458,15 @@ h3 {
   height: 50%;
   clear: both;
   overflow: hidden;
+  box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side*/
+  /*border-color: #DCDCDC;
+  border-style: solid;
+  border-width: thick;  sky sports border*/
+}
+
+.col-2:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -503,9 +516,9 @@ h3 {
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-2"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;/*margin-left: -2.4%;*/
+        margin-left: -1%;/*margin-left: -2.4%;*/
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -523,7 +536,7 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 767px) { 
+@media only screen and (max-width: 767px) {
     .secimg {
       width: 100%;
       height: 60%;
@@ -535,6 +548,7 @@ h3 {
         width: 30%;
         height: 100%; /*was90%*/
         float: left;
+        padding: 0.5%;
     }
 }
 
@@ -664,7 +678,12 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
   display: inline-block;
   height: 50%;
   overflow: hidden;
+  box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side*/
+}
+
+.col-3:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -711,9 +730,9 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-3"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;
+        margin-left: -1%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -729,7 +748,12 @@ margin-right: 3%; /*23px*/
 display: inline-block;
 height: 50%;
 overflow: hidden;
+box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
+}
+
+.col-4:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -778,9 +802,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-4"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;
+        margin-left: -1%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -797,7 +821,12 @@ margin-left: 10%;
 display: inline-block;
 height: 50%;
 overflow: hidden;
+box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
+}
+
+.col-5:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -850,9 +879,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-5"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;
+        margin-left: -1%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -868,7 +897,12 @@ margin-right: 2%;
 display: inline-block;
 height: 50%;
 overflow: hidden;
+box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
+}
+
+.col-6:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -917,9 +951,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-6"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;
+        margin-left: -1%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -935,7 +969,12 @@ display: inline-block;
 height: 50%;
 overflow: hidden;
 margin-bottom: 1%; /*for footer*/
+box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
+}
+
+.col-7:hover {
+  box-shadow: 0px 4px 20px 0px #888888;
 }
 
 @media only screen and (max-width: 1174px) {
@@ -982,9 +1021,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-7"] {
-        width: 97%;
+        width: 100%;
         background-color: white;
-        margin-left: 0;
+        margin-left: -1%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -1000,13 +1039,7 @@ padding: 0.3%; /*to make img fit full div side*/
 
 html {
     font-family: "Ubuntu", sans-serif;
-    background-color: rgba(0,0,0,0.1);
-}
-
-@media only screen and (max-width: 320px) {
-    html {
-      background-color: rgba(0,0,0,0.1);
-    }
+    background-color: #d7d5dd;
 }
 
 a:link{ /*removes underline from links*/
@@ -1045,8 +1078,12 @@ div { /*fixes issue with quirks mode and doctype*/
     height: 3em;
     margin-top: -3em;
     text-align: center;
-    background-color: #04C5FF;
+    background-color: #414143;
     padding: 1px;
     margin-left: -1%;
     width: 101%;
+}
+
+.footer p {
+  color: #068df6;
 }
