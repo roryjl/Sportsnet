@@ -456,7 +456,7 @@ h3 {
     .col-1 {
        height: 60%;
        padding: 0px; /*need because col-*: paddding 15px*/
-       margin-left: -2.4%;
+       margin-left: 0%;
     }
 }
 
@@ -1182,6 +1182,18 @@ a:visited { /*removes purple txt color from links*/
 
 .footsec a {
   color: #F60;
+}
+
+.hurlsec a {
+  color: #068df6;
+}
+
+.soccersec a {
+  color: #3ea447;
+}
+
+.f1sec a {
+  color: #C00;
 }
 
 
