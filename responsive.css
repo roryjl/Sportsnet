@@ -85,6 +85,8 @@
 .topnav {  /*main nav positioning*/
   margin-left: -0.7%;
   width: 100.7%;
+  position: fixed; /*for sticky navbar*/
+  opacity: 0.99;
 }
 
 @media screen and (max-width: 694px) {
@@ -161,9 +163,19 @@ ul.sub-menu{
   border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
   border: 1px solid #414143;
-  transform: translateY(-4em); /* dropdown slide down animation start*/
+  transform: translateY(-2em); /* dropdown slide down animation start*/
   z-index: 10;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
+  animation: pulse 3s; /*opacity animation*/
+}
+
+@keyframes pulse { /*opacity animation*/
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 ul.sub-menu li{
@@ -394,6 +406,7 @@ h3 {
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
+  margin-top: 5em; /*for sticky navbar*/
 }
 
 .col-1:hover {
@@ -631,13 +644,88 @@ h3 {
   }
 }
 
+/*start of small txts*/
+p.soccersec { /*fixes issue with sectxt going too far down, see in developer tools*/
+  height: 5px;
+}
+
+.soccersec {
+  color: #3ea447;
+  margin-left: 5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (max-width: 694px) {
+    [class="soccersec"] {
+        float: left;
+        margin-left: 3%;
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    [class="soccersec"] {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .soccersec {
+       margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
+  .soccersec {
+    font-size: 85%;
+  }
+}
+
+
+
+p.f1sec { /*fixes issue with sectxt going too far down, see in developer tools*/
+  height: 5px;
+}
+
+.f1sec {
+  color: #C00;
+  margin-left: 5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (max-width: 694px) {
+    [class="f1sec"] {
+        float: left;
+        margin-left: 3%;
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    [class="f1sec"] {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .f1sec {
+       margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
+  .f1sec {
+    font-size: 85%;
+  }
+}
+
+
 p.footsec { /*fixes issue with sectxt going too far down, see in developer tools*/
   height: 5px;
 }
 
-
 .footsec {
-  color: skyblue;
+  color: #F60;
   margin-left: 5%;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -664,6 +752,43 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 @media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
   .footsec {
+    font-size: 85%;
+  }
+}
+
+
+p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools*/
+  height: 5px;
+}
+
+.hurlsec {
+  color: #068df6;
+  margin-left: 5%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@media only screen and (max-width: 694px) {
+    [class="hurlsec"] {
+        float: left;
+        margin-left: 3%;
+        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    [class="hurlsec"] {
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .hurlsec {
+       margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
+  .hurlsec {
     font-size: 85%;
   }
 }
@@ -1056,7 +1181,7 @@ a:visited { /*removes purple txt color from links*/
 }
 
 .footsec a {
-  color: #068df6;
+  color: #F60;
 }
 
 
@@ -1085,7 +1210,8 @@ div { /*fixes issue with quirks mode and doctype*/
     text-align: center;
     background-color: #414143;
     padding: 1px;
-    width: 100%;
+    width: 101%;
+    margin-left: -1%;
 }
 
 .footer p {
