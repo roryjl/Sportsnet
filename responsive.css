@@ -423,7 +423,7 @@ h3 {
   background-color: white;
   color: #ffffff;
   margin-left: 10%;
-  height: 60%;
+  height: 55%; /*was 60%*/
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
