@@ -167,6 +167,11 @@ ul.sub-menu{
   z-index: 10;
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
   animation: pulse 3s; /*opacity animation*/
+
+  /*transform: scale(0) translateX(-50%);/*part of pl website dropdown animation
+  transform-origin: left top;
+  transition: all 1s;
+  -webkit-transform: scale(0) translateX(-50%);*/
 }
 
 @keyframes pulse { /*opacity animation*/
@@ -201,7 +206,7 @@ ul.sub-menu li:hover {  /*dropdown menu hover*/
 @media only screen and (max-width: 712px) {
     /*hides dropdown when in mobile view*/
     .sub-menu {
-       opacity: 0;
+       display: none;
     }
 }
 
@@ -303,15 +308,15 @@ li:hover::after {
 .mainimg {
   height: 100%;
   width: 60%;
-  -moz-transition: all 0.5s;
+  /*-moz-transition: all 0.5s;  taken out because dropdown intially went underneath mainimg
   -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  transition: all 0.5s;*/
 }
 
 .mainimg:hover {
-  -moz-transform: scale(1.04);
+  /*-moz-transform: scale(1.04);   taken out because dropdown intially went underneath mainimg
   -webkit-transform: scale(1.04);
-  transform: scale(1.04);
+  transform: scale(1.04);*/
 }
 
 @media only screen and (max-width: 855px) {
