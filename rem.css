@@ -371,7 +371,13 @@ h3 {
     }
 }
 
-@media only screen and (max-height: 561px) and (min-width: 855px) {
+@media only screen and (max-width: 320px) and (max-height: 460px) {
+    .maintxt {
+       margin-top: -0.5rem;
+    }
+}
+
+@media only screen and (min-width: 855px) and (max-height: 561px) {
     .maintxt {
        margin-top: -15rem;
     }
