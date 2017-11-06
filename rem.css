@@ -349,7 +349,7 @@ h3 {
 .maintxt {
   /*background-color: red;*/
   width: 35%;
-  margin-top: -17rem;/*-30%*/
+  margin-top: -20rem;
   margin-left: 64%;
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
@@ -365,9 +365,15 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 520px) and (max-height: 460px) {
+@media only screen and (max-width: 320px) and (max-height: 620px) {
     .maintxt {
        font-size: 70%;
+    }
+}
+
+@media only screen and (max-height: 561px) and (min-width: 855px) {
+    .maintxt {
+       margin-top: -15rem;
     }
 }
 
@@ -657,9 +663,15 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 520px) and (max-height: 460px) {
+@media only screen and (max-width: 520px) and (max-height: 620px) {
     .sectxt {
        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 480px) {
+    .sectxt {
+       margin-top: 2rem;
     }
 }
 
@@ -753,7 +765,7 @@ p.soccersec { /*fixes issue with sectxt going too far down, see in developer too
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .soccersec {
-       margin-top: 5%;
+       margin-top: 2%;
     }
 }
 
@@ -791,7 +803,7 @@ p.f1sec { /*fixes issue with sectxt going too far down, see in developer tools*/
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .f1sec {
-       margin-top: 5%;
+       margin-top: 2%;
     }
 }
 
@@ -828,7 +840,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .footsec {
-       margin-top: 5%;
+       margin-top: 2%;
     }
 }
 
@@ -865,7 +877,7 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .hurlsec {
-       margin-top: 5%;
+       margin-top: 2%;
     }
 }
 
