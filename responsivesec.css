@@ -1,3 +1,6 @@
+/*DIFFERENCE between sec.responsive and rem.css is no sticky (relative for z-index) .topnav and h1.sectionhead css added, margin-top col-1 removed*/
+
+
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:885px) {
   ul.topnav li:not(:first-child) {display: none;}
@@ -86,7 +89,9 @@
   margin-left: -0.7%;
   width: 100.7%;
   /*position: fixed; /*for sticky navbar*/
+  position: relative;
   opacity: 0.95;
+  z-index: 999; /*fixes issue where dropdown appeared under image while image was hovered(zoomed-in)*/
 }
 
 @media screen and (max-width: 694px) {
@@ -165,8 +170,13 @@ ul.sub-menu{
   border: 1px solid #414143;
   transform: translateY(-2em); /* dropdown slide down animation start*/
   z-index: 10;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end*/
+  transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end was all 0.3s*/
   animation: pulse 3s; /*opacity animation*/
+
+  /*transform: scale(0) translateX(-50%);/*part of pl website dropdown animation
+  transform-origin: left top;
+  transition: all 1s;
+  -webkit-transform: scale(0) translateX(-50%);*/
 }
 
 @keyframes pulse { /*opacity animation*/
@@ -201,7 +211,7 @@ ul.sub-menu li:hover {  /*dropdown menu hover*/
 @media only screen and (max-width: 712px) {
     /*hides dropdown when in mobile view*/
     .sub-menu {
-       opacity: 0;
+       display: none;
     }
 }
 
@@ -230,7 +240,7 @@ li::after {
   width: 0%;
   height: 2px; /*width of white animation line*/
   display: block;
-  background-color: #fff; /*line under(animation) color*/
+  background-color: #404042; /*line under(animation) color CLOSING*/
   content: " ";
   position: absolute;
   top: 60px;
@@ -250,7 +260,7 @@ li:hover::after {
   width: 100%;
   height: 2px;
   display: block;
-  background-color: #ddd; /*line under(animation) color*/
+  background-color: #fff; /*line under(animation) color OPENing*/
   content: " ";
   position: absolute;
   top: 60px;
@@ -298,18 +308,16 @@ li:hover::after {
 /*end of nav*/
 
 
-
-
 .mainimg {
-  height: 100%;
-  width: 60%;
-  -moz-transition: all 0.5s;
+  height: 100%; /*21.1rem*/
+  width: 60%; /*40rem*/
+  -moz-transition: all 0.5s;  /* was taken out because dropdown intially went underneath mainimg - fixed by .topnav z-index: 999; (parent element)*/
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .mainimg:hover {
-  -moz-transform: scale(1.04);
+  -moz-transform: scale(1.04);   /*comment above in .mainimg*/
   -webkit-transform: scale(1.04);
   transform: scale(1.04);
 }
@@ -344,15 +352,17 @@ h3 {
 
 h1.sectionhead {
   text-align: center;
+  color: #3ea447;
 }
 
 .maintxt {
   /*background-color: red;*/
   width: 35%;
-  margin-top: -30%;
+  margin-top: -20rem;
   margin-left: 64%;
   font-family: 'Ubuntu', sans-serif;
   font-variant: small-caps;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 855px) {
@@ -364,15 +374,39 @@ h1.sectionhead {
     }
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 320px) and (max-height: 620px) {
+    .maintxt {
+       font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 480px) {
+    .maintxt {
+       margin-top: -0.5rem;
+    }
+}
+
+@media only screen and (min-width: 855px) and (max-height: 561px) {
+    .maintxt {
+       margin-top: -15rem;
+    }
+}
+
+/*@media only screen and (max-width: 799px) { /*taken out when justify-content was put in for maintxt
     .maintxt {
        margin-top: -1%;
     }
 }
 
-@media only screen and (max-width: 446px) {
+@media only screen and (max-width: 478px/*446*//*) {
     .maintxt {
        font-size: 95%;
+    }
+}
+
+@media only screen and (max-width: 456px) and (max-height: 460px) {
+    .maintxt {
+       font-size: 85%;
     }
 }
 
@@ -384,7 +418,13 @@ h1.sectionhead {
 
 @media only screen and (max-width: 427px) and (max-height: 460px) {
     .maintxt {
-       margin-top: -3%; /*was -7% paddding*/
+       margin-top: -3%; /*was -7% paddding*//*
+    }
+}
+
+@media only screen and (max-width: 456px) and (max-height: 540px) {
+    .maintxt {
+       margin-top: -6%;
     }
 }
 
@@ -393,7 +433,7 @@ h1.sectionhead {
        font-size: 85%;
        margin-top: -6%;
     }
-}
+}*/
 
 * {
     box-sizing: border-box;
@@ -412,10 +452,11 @@ h1.sectionhead {
 
 .col-1 {
   width: 77.5%;
-  background-color: white;
+  /*background-color: white;*/
+  background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); /*skysports col color*/
   color: #ffffff;
   margin-left: 10%;
-  height: 60%;
+  height: 55%; /*was 60%*/
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
@@ -456,12 +497,25 @@ h1.sectionhead {
     }
 }
 
+@media only screen and (max-width: 855px) {
+    .col-1:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 928px) {
+    .col-1 {
+       height: 30rem;
+    }
+}
+
 @media only screen and (max-width: 694px) {
     [class="col-1"] {
         width: 100%;
         background-color: white;
         margin-left: 0%;/*margin-left: -1.2%;*/
         padding: 0px;
+        height: 60%; /*just added*/
     }
 }
 
@@ -477,6 +531,7 @@ h1.sectionhead {
 .col-2 {
   width: 24.33%;
   background-color: white;
+  /*background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); skysports col color*/
   color: #ffffff;
   margin-top: 30px;
   margin-right: 2%;
@@ -523,6 +578,12 @@ h1.sectionhead {
         width: 46%;
         height: 57%;
         margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .col-2:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
     }
 }
 
@@ -598,16 +659,42 @@ h1.sectionhead {
   color: black;
   margin-left: 5%;
   text-decoration: none;
-  margin-top: 9%;
+  margin-top: 2rem; /*9%*/
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 694px) {
     [class="sectxt"] {
+        margin-top: 3rem;
+        margin-left: 32.8%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    [class="sectxt"] {
+        margin-left: 46.8%;
+    }
+}
+
+@media only screen and (max-width: 520px) and (max-height: 620px) {
+    .sectxt {
+       font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) and (max-height: 480px) {
+    .sectxt {
+       margin-top: 2rem;
+    }
+}
+
+/*@media only screen and (max-width: 694px) {
+    [class="sectxt"] {
         margin-top: 7%;
         margin-left: 32.8%; /*did use float here but causes issues with text responsiveness, needs different margins*/
-    }
+    /*}
 }
 
 @media only screen and (max-width: 631px) {
@@ -661,7 +748,7 @@ h1.sectionhead {
 }
 
 @media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
-  .sectxt {
+  /*.sectxt {
     font-size: 85%;
   }
 }
@@ -693,7 +780,7 @@ p.soccersec { /*fixes issue with sectxt going too far down, see in developer too
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .soccersec {
-       margin-top: 1%;
+       margin-top: 2%;
     }
 }
 
@@ -731,7 +818,7 @@ p.f1sec { /*fixes issue with sectxt going too far down, see in developer tools*/
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .f1sec {
-       margin-top: 1%;
+       margin-top: 2%;
     }
 }
 
@@ -768,7 +855,7 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .footsec {
-       margin-top: 1%;
+       margin-top: 2%;
     }
 }
 
@@ -805,7 +892,7 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 @media only screen and (max-width: 320px) and (max-height: 460px) {
     .hurlsec {
-       margin-top: 1%;
+       margin-top: 2%;
     }
 }
 
@@ -858,6 +945,12 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
     [class="col-3"] {
         width: 46%;
         height: 57%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .col-3:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
     }
 }
 
@@ -929,6 +1022,12 @@ padding: 0.3%; /*to make img fit full div side*/
         width: 46%;
         height: 57%;
         margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 855px) {
+    .col-4:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
     }
 }
 
@@ -1008,6 +1107,12 @@ padding: 0.3%; /*to make img fit full div side*/
     }
 }
 
+@media only screen and (max-width: 855px) {
+    .col-5:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
+    }
+}
+
 @media only screen and (max-width: 768px) and (max-height: 928px) {
     .col-5 {
        height: 40%;
@@ -1081,6 +1186,12 @@ padding: 0.3%; /*to make img fit full div side*/
     }
 }
 
+@media only screen and (max-width: 855px) {
+    .col-6:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
+    }
+}
+
 @media only screen and (max-width: 768px) and (max-height: 928px) {
     .col-6 {
        height: 40%;
@@ -1151,6 +1262,12 @@ padding: 0.3%; /*to make img fit full div side*/
     }
 }
 
+@media only screen and (max-width: 855px) {
+    .col-7:hover {
+       box-shadow: 0px 0px 0px 0px #888888;
+    }
+}
+
 @media only screen and (max-width: 768px) and (max-height: 928px) {
     .col-7 {
        height: 40%;
@@ -1185,7 +1302,8 @@ padding: 0.3%; /*to make img fit full div side*/
 
 html {
     font-family: "Ubuntu", sans-serif;
-    background-color: #d7d5dd;
+    /*background-color: #d7d5dd;*/
+    background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
 }
 
 a:link{ /*removes underline from links*/
