@@ -456,7 +456,7 @@ h3 {
   margin-left: 10%;
   height: 24rem; /*was 55%*/
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #888888;
+  box-shadow: 0px 2px 2px 0px #d2d7db;
   padding: 0.4%; /*to make img fit full div side, universal selector gives padding automatically*/
   margin-top: 5em; /*for sticky navbar*/
 }
@@ -552,7 +552,7 @@ h3 {
   height: 20rem; /*50*/
   clear: both;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #888888;
+  box-shadow: 0px 2px 2px 0px #d2d7db;
   padding: 0.3%; /*to make img fit full div side*/
   /*border:5px solid #f7f7f7;*/
   /*border-color: red;
@@ -929,7 +929,7 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
   display: inline-block;
   height: 20rem; /*50%*/
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #888888;
+  box-shadow: 0px 2px 2px 0px #d2d7db;
   padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1006,7 +1006,7 @@ margin-right: 3%; /*23px*/
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #888888;
+box-shadow: 0px 2px 2px 0px #d2d7db;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1086,7 +1086,7 @@ margin-left: 10%;
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #888888;
+box-shadow: 0px 2px 2px 0px #d2d7db;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1169,7 +1169,7 @@ margin-right: 2%;
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #888888;
+box-shadow: 0px 2px 2px 0px #d2d7db;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1248,7 +1248,7 @@ display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
 margin-bottom: 2%; /*for footer*/
-box-shadow: 0px 2px 2px 0px #888888;
+box-shadow: 0px 2px 2px 0px #d2d7db;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
