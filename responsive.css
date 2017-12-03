@@ -153,14 +153,14 @@ ul.sub-menu{
   list-style-type: none;
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
-  font-variant: small-caps;
+  font-variant: normal;
   width: 130px; /*was 124px*/
   height: 220px; /*defines height of dropdown, new- wasnt always here*/
   padding-left: 0px;
   margin-left: 0px;
   padding-top: 0px;
   visibility: hidden; /*hides dropdown when not hovered*/
-  font-size: .7em;
+  font-size: .65em;
   border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
   border: 1px solid #414143;
@@ -352,7 +352,7 @@ h3 {
   margin-top: -20rem;
   margin-left: 64%;
   font-family: 'Ubuntu', sans-serif;
-  font-variant: small-caps;
+  /*font-variant: small-caps;*/
   justify-content: center;
 }
 
@@ -360,14 +360,21 @@ h3 {
     .maintxt {
        margin-left: 5%;
        margin-top: 0;
-       margin-top: 4%;
        width: 90%;
+       font-size: .9rem;
     }
 }
 
-@media only screen and (max-width: 320px) and (max-height: 620px) {
+@media only screen and (max-width: 694px) {
     .maintxt {
-       font-size: 70%;
+       font-size: .8rem;
+       margin-top: -0.5em;
+    }
+}
+
+@media only screen and (max-width: 520px) and (max-height: 620px) {
+    .maintxt {
+       font-size: 60%;
     }
 }
 
@@ -442,15 +449,15 @@ h3 {
 }
 
 .col-1 {
-  width: 77.5%;
+  width: 77%;
   /*background-color: white;*/
   background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); /*skysports col color*/
   color: #ffffff;
   margin-left: 10%;
-  height: 55%; /*was 60%*/
+  height: 24rem; /*was 55%*/
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
-  padding: 0.3%; /*to make img fit full div side, universal selector gives padding automatically*/
+  padding: 0.4%; /*to make img fit full div side, universal selector gives padding automatically*/
   margin-top: 5em; /*for sticky navbar*/
 }
 
@@ -461,7 +468,7 @@ h3 {
 @media only screen and (max-width: 1174px) { /*1056px*/
     /* For mobile phones: */
     [class="col-1"] {
-        width: 87%;
+        width: 85%;
         margin-left: 6.5%;
     }
 }
@@ -471,6 +478,14 @@ h3 {
     [class="col-1"] {
         margin-left: 1%;
         width: 95.5%;
+    }
+}
+
+@media only screen and (max-width: 915px) {
+    /* For mobile phones: */
+    [class="col-1"] {
+        width: 94%;
+        margin-left: 2%;
     }
 }
 
@@ -502,11 +517,18 @@ h3 {
 
 @media only screen and (max-width: 694px) {
     [class="col-1"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;/*margin-left: -1.2%;*/
+        /*margin-left: 0%;/*margin-left: -1.2%;*/
+        margin-left: 2.5%;
         padding: 0px;
         height: 60%; /*just added*/
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    [class="col-1"] {
+        height: 50%; /*just added*/
     }
 }
 
@@ -522,17 +544,18 @@ h3 {
 .col-2 {
   width: 24.33%;
   background-color: white;
-  /*background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); skysports col color*/
+  /*background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
   color: #ffffff;
   margin-top: 30px;
   margin-right: 2%;
   margin-left: 10%;
-  height: 50%;
+  height: 20rem; /*50*/
   clear: both;
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side*/
-  /*border-color: #DCDCDC;
+  /*border:5px solid #f7f7f7;*/
+  /*border-color: red;
   border-style: solid;
   border-width: thick;  sky sports border*/
 }
@@ -560,6 +583,7 @@ h3 {
     [class="col-2"] {
         width: 46%;
         height: 60%;
+        margin-left: 2%;
     }
 }
 
@@ -594,9 +618,9 @@ h3 {
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-2"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;/*margin-left: -2.4%;*/
+        margin-left: 2.5%;/*margin-left: -2.4%;*/
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -653,6 +677,7 @@ h3 {
   margin-top: 2rem; /*9%*/
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
+  font-variant: normal;
   justify-content: center;
 }
 
@@ -896,12 +921,13 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 .col-3 {
   width: 24.33%;
-  background-color: white;
+  /*background-color: white;*/
+  background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
   color: #ffffff;
   margin-top: 30px;
   margin-right: 2%;
   display: inline-block;
-  height: 50%;
+  height: 20rem; /*50%*/
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #888888;
   padding: 0.3%; /*to make img fit full div side*/
@@ -961,9 +987,10 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-3"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
         margin-top: 10px;
+        margin-left: 2.5%;
         height: 20%; /*was 27%*/
         padding: 0;
     }
@@ -971,12 +998,13 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 .col-4 {
 width: 24.33%;
-background-color: white;
+/*background-color: white;*/
+background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
 color: #ffffff;
 margin-top: 30px;
 margin-right: 3%; /*23px*/
 display: inline-block;
-height: 50%;
+height: 20rem; /*50%*/
 overflow: hidden;
 box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
@@ -1003,7 +1031,7 @@ padding: 0.3%; /*to make img fit full div side*/
     [class="col-4"] {
         width: 46%;
         height: 60%;
-        margin-left: 1%;
+        margin-left: 2%;
     }
 }
 
@@ -1038,9 +1066,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-4"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;
+        margin-left: 2.5%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -1049,13 +1077,14 @@ padding: 0.3%; /*to make img fit full div side*/
 
 .col-5 {
 width: 24.33%;
-background-color: white;
+/*background-color: white;*/
+background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
 margin-left: 10%;
 display: inline-block;
-height: 50%;
+height: 20rem; /*50%*/
 overflow: hidden;
 box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
@@ -1121,9 +1150,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-5"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;
+        margin-left: 2.5%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -1132,12 +1161,13 @@ padding: 0.3%; /*to make img fit full div side*/
 
 .col-6 {
 width: 24.33%;
-background-color: white;
+/*background-color: white;*/
+background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
 display: inline-block;
-height: 50%;
+height: 20rem; /*50%*/
 overflow: hidden;
 box-shadow: 0px 2px 2px 0px #888888;
 padding: 0.3%; /*to make img fit full div side*/
@@ -1164,7 +1194,7 @@ padding: 0.3%; /*to make img fit full div side*/
     [class="col-6"] {
         width: 46%;
         height: 60%;
-        margin-left: 1%;
+        margin-left: 2%;
     }
 }
 
@@ -1199,9 +1229,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-6"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;
+        margin-left: 2.5%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
@@ -1210,11 +1240,12 @@ padding: 0.3%; /*to make img fit full div side*/
 
 .col-7 {
 width: 24.33%;
-background-color: white;
+/*background-color: white;*/
+background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
 color: #ffffff;
 margin-top: 30px;
 display: inline-block;
-height: 50%;
+height: 20rem; /*50%*/
 overflow: hidden;
 margin-bottom: 2%; /*for footer*/
 box-shadow: 0px 2px 2px 0px #888888;
@@ -1275,9 +1306,9 @@ padding: 0.3%; /*to make img fit full div side*/
 @media only screen and (max-width: 694px) {
     /* For mobile phones: */
     [class="col-7"] {
-        width: 100%;
+        width: 95%;
         background-color: white;
-        margin-left: 0%;
+        margin-left: 2.5%;
         margin-top: 10px;
         height: 20%; /*was 27%*/
         padding: 0;
