@@ -536,7 +536,7 @@ h3 {
     .col-1 {
        height: 60%;
        padding: 0px; /*need because col-*: paddding 15px*/
-       margin-left: 0%;
+       margin-left: 2.5%;
     }
 }
 
