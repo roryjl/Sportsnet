@@ -1,4 +1,6 @@
-/*DIFFERENCE between sec-responsive.css and applenav.responsive.css is no sticky (position:relative for z-index) (.topnav??? mybe already there) and h1.sectionhead css added, h1.sectionhead {margin-top: -5rem; at 855px, margin-top col-1 removed. Margin-top: 0; added to col-1 at 855px*/
+/*DIFFERENCE between sec-responsive.css and applenav.responsive.css is no sticky (position:relative for z-index) .topnav (i think i got rid of sticky nav cause its now 'fixed'),  and h1.sectionhead css added, h1.sectionhead {margin-top: -5(3)rem; at 855px, margin-top col-1 removed. Margin-top: 0; added to col-1 at 885px*/
+
+/*img in nav required to be saved in same folder as other files (rsign/png)*/
 
 /*start of mobile nav*/
 
@@ -327,7 +329,7 @@ body {
 .topnav {  /*main nav positioning*/
   margin-left: -0.7%;
   width: 100.7%;
-  position: relative; /*for sticky navbar*/
+  position: relative; /*for sticky navbar removed*/
   opacity: 0.95;
   z-index: 999; /*fixes issue where dropdown appeared under image while image was hovered(zoomed-in)*/
   margin-top: 0; /*fixes issue of main nav going too far up*/
@@ -335,7 +337,7 @@ body {
 
 @media screen and (max-width: 885px) {
   .topnav {
-  visibility: hidden;
+  display: none;
  }
 }
 
@@ -624,9 +626,9 @@ h1.sectionhead {
   color: #3ea447;
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 885px) {
     h1.sectionhead {
-       margin-top: -5rem;
+       padding-top: 3rem; /*use padding not margin*/
     }
 }
 
@@ -679,6 +681,7 @@ h1.sectionhead {
     box-sizing: border-box;
 }
 
+
 .row::after {
     content: "";
     clear: both;
@@ -700,6 +703,7 @@ h1.sectionhead {
   overflow: hidden;
   box-shadow: 0px 2px 2px 0px #d2d7db;
   padding: 0.4%; /*to make img fit full div side, universal selector gives padding automatically*/
+  /*margin-top: 6em; /*for sticky navbar*/
 }
 
 .col-1:hover {
@@ -732,7 +736,7 @@ h1.sectionhead {
 
 @media only screen and (max-width: 885px) {
     .col-1 {
-       margin-top: 4.5em; /*makes mobile nav margin same as desktop nav's*/
+       margin-top: 0em; /*makes mobile nav margin same as desktop nav's (4.5)*/
     }
 }
 
@@ -747,7 +751,6 @@ h1.sectionhead {
     /*hides dropdown when in mobile view*/
     .col-1 {
        height: 80%; /*jw 40%*/
-       margin-top: 0;
     }
 }
 
@@ -1577,4 +1580,3 @@ div { /*fixes issue with quirks mode and doctype*/
 .footer p {
   color: #068df6;
 }
- 
