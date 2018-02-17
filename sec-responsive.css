@@ -1,39 +1,278 @@
-/*DIFFERENCE between sec-responsive.css and responsive.css is no sticky (position:relative for z-index) .topnav and h1.sectionhead css added, margin-top col-1 removed*/
+/*DIFFERENCE between sec-responsive.css and applenav.responsive.css is no sticky (position:relative for z-index) (.topnav??? mybe already there) and h1.sectionhead css added, h1.sectionhead {margin-top: -5rem; at 855px, margin-top col-1 removed. Margin-top: 0; added to col-1 at 855px*/
+
+/*start of mobile nav*/
+
+.navlogo {
+  max-width: 14em;
+  max-height: 4rem;
+  margin-top: -0.5rem;
+  margin-left: -1rem;
+}/*added*/
 
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:885px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right; /*hamburger icon float*/
-    display: inline-block;
-    background-color: #04C5FF; /*icon background was #068df6*/
-  }
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+body {
+  margin: 0;
+  line-height: 1.4;
+  background: #E1E1E1;
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:885px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left; /*text align for nav options txt when mobile nav is opened*/
-    margin-left: 10px; /*margin left for nav options txt when mobile nav is opened, i added this*/
-  }
+.window {
+  position: relative;
+  display: block;
+  width: 360px;
+  height: 567px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 65px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+  background: #F1F1F1;
+}
+.header {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #256bdb; /*color of main nav was rgba(0, 0, 0, 0.8)*/
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out, background 1s ease-out;
+  transition: all 0.5s ease-out, background 1s ease-out;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  z-index: 1;
+  visibility: hidden;/*added*/
+}
+
+@media only screen and (max-width: 885px) {
+    .header {
+       visibility: visible;
+    }
 }
 
 
+.header .burger-container {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.header .burger-container #burger {
+  width: 18px;
+  height: 8px;
+  position: relative;
+  display: block;
+  margin: -4px auto 0;
+  top: 50%;
+}
+.header .burger-container #burger .bar {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  background: #FFF;
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.header .burger-container #burger .bar.topBar {
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+}
+.header .burger-container #burger .bar.btmBar {
+  -webkit-transform: translateY(6px) rotate(0deg);
+          transform: translateY(6px) rotate(0deg);
+}
+.header .icon {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #FFF;
+  font-size: 22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.header .icon.icon-bag {
+  right: 0;
+  top: 0;
+  left: auto;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+.header ul.menu {
+  position: relative;
+  display: block;
+  padding: 0px 48px 0;
+  list-style: none;
+}
+.header ul.menu li.menu-item {
+  border-bottom: 1px solid #79869b; /*color of seperating lines dropdwn was #333*/
+  margin-top: 5px;
+  -webkit-transform: scale(1.15) translateY(-30px);
+          transform: scale(1.15) translateY(-30px);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.header ul.menu li.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.49s;
+          transition-delay: 0.49s;
+}
+.header ul.menu li.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.42s;
+          transition-delay: 0.42s;
+}
+.header ul.menu li.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+.header ul.menu li.menu-item:nth-child(4) {
+  -webkit-transition-delay: 0.28s;
+          transition-delay: 0.28s;
+}
+.header ul.menu li.menu-item:nth-child(5) {
+  -webkit-transition-delay: 0.21s;
+          transition-delay: 0.21s;
+}
+.header ul.menu li.menu-item:nth-child(6) {
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+}
+.header ul.menu li.menu-item:nth-child(7) {
+  -webkit-transition-delay: 0.07s;
+          transition-delay: 0.07s;
+}
+.header ul.menu li.menu-item a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  font-family: "Ek Mukta", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 2.35;
+  font-weight: 200;
+  width: 100%;
+}
+.header.menu-opened {
+  height: 100%;
+  background-color: #062659; /*color of dropdwn was #000*/
+  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
+  transition: all 0.3s ease-in, background 0.5s ease-in;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+.header.menu-opened .burger-container {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.header.menu-opened .burger-container #burger .bar {
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0.1s; /*0.2*/
+          transition-delay: 0.1s; /*0.2*/
+}
+.header.menu-opened .burger-container #burger .bar.topBar {
+  -webkit-transform: translateY(4px) rotate(45deg);
+          transform: translateY(4px) rotate(45deg);
+}
+.header.menu-opened .burger-container #burger .bar.btmBar {
+  -webkit-transform: translateY(3px) rotate(-45deg);
+          transform: translateY(3px) rotate(-45deg);
+}
+.header.menu-opened ul.menu li.menu-item {
+  -webkit-transform: scale(1) translateY(0px);
+          transform: scale(1) translateY(0px);
+  opacity: 1;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.27s;
+          transition-delay: 0.27s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.34s;
+          transition-delay: 0.34s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.41s;
+          transition-delay: 0.41s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(4) {
+  -webkit-transition-delay: 0.48s;
+          transition-delay: 0.48s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(5) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(6) {
+  -webkit-transition-delay: 0.62s;
+          transition-delay: 0.62s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(7) {
+  -webkit-transition-delay: 0.69s;
+          transition-delay: 0.69s;
+}
+.header.menu-opened .icon.icon-bag {
+  -webkit-transform: translateX(75px);
+          transform: translateX(75px);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+
+
+
+/*ul.sub-menu{
+  visibility: hidden;
+  position: absolute;
+  background-color: red;
+  list-style-type: none;
+}
+
+.menu-item:hover .sub-menu {
+  visibility: visible;
+}*/
+
+/*end of mobile nav*/
+
+
+
+
+
+
+
+
+
+/*start of desktop nav*/
 
 .webtitle { /*img in nav*/
-  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/3a/6f/26/3a6f2651cd008f7e4caafefcc86870b5.jpg);/*url(/Users/BrianLambe/Downloads/oie_transparent.png); /*url(http://free4kwallpaper.com/wp-content/uploads/logos/Blue-and-White-Apple-Logo-4K-Wallpaper.jpg)*/ /* /Users/BrianLambe/Downloads/Blue\ and\ white\ apple\ logo.jpg */
+  background-image: url(rsign.png);/*was https://s-media-cache-ak0.pinimg.com/originals/3a/6f/26/3a6f2651cd008f7e4caafefcc86870b5.jpg*/
   background-position: center;
   width: 129px;
   height: 70px;
@@ -54,7 +293,7 @@
 }
 
 .navimgtxt { /*txt in nav img*/
-  color: #F4F3F9;
+  color: #fff; /*was #F4F3F9*/
 }
 
 @media screen and (max-width: 885px) { /*img in nav*/
@@ -88,9 +327,16 @@
 .topnav {  /*main nav positioning*/
   margin-left: -0.7%;
   width: 100.7%;
-  position: relative; /*for not sticky navbar*/
+  position: relative; /*for sticky navbar*/
   opacity: 0.95;
   z-index: 999; /*fixes issue where dropdown appeared under image while image was hovered(zoomed-in)*/
+  margin-top: 0; /*fixes issue of main nav going too far up*/
+}
+
+@media screen and (max-width: 885px) {
+  .topnav {
+  visibility: hidden;
+ }
 }
 
 @media screen and (max-width: 694px) {
@@ -117,7 +363,7 @@ nav li {
 
 nav ul {
   text-align: center;
-  background-color: #04C5FF; /*backgr color in navbar - was #068df6*/
+  background-color: #068df6; /*backgr color in navbar - was #04C5FF*/
   border-radius: 3px;
   padding: 0; /*removes gap on left side of main nav*/
   width: 100%;
@@ -131,14 +377,14 @@ nav ul {
 }
 
 nav a:hover {
-background-color: #04C5FF/*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was  #068df6*/
+background-color: #068df6/*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was  #04C5FF*/
 cursor: pointer;
 border-radius: 0px; /*was 5px*/
 /*color: rgba(0,0,0,0.1); text hover color main nav*/
 }
 
 nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc being hovered*/
-  background-color: #04C5FF; /*was #068df6 */
+  background-color: #068df6; /*was #04C5FF */
 }
 
 nav a {
@@ -152,7 +398,7 @@ nav a {
 
 ul.sub-menu{
   position: absolute;
-  background-color: #04C5FF; /*dropdown backroundcolor was #068df6 before logo*/
+  background-color: #068df6; /*dropdown backroundcolor was #04C5FF*/
   list-style-type: none;
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
   font-family: 'Ubuntu', sans-serif;
@@ -235,12 +481,23 @@ nav li:hover .sub-menu{
 
 
 /*underline animation for nav start*/
+
 li {
-  display: inline-block;
+  display: block; /*was inline-block before apple mob nav*/
   position: relative;
   border: 0px solid transparent;/*was 2px, gap between main nav and dropdown*/
   color: #005689;
 }
+
+/*@media only screen and (min-width: 885px) {  /*to remove underline animation from hamburger*/
+  /*li {
+    display: inline-block;
+    position: relative;
+    border: 0px solid transparent;/*was 2px, gap between main nav and dropdown*/
+    /*color: #005689;
+  }
+}*/
+
 
 li::after {
   width: 0%;
@@ -311,7 +568,13 @@ li:hover::after {
   display: none;
 }
 /*icon end*/
-/*end of nav*/
+/*end of desktop nav*/
+
+
+
+
+
+
 
 
 .mainimg {
@@ -361,6 +624,13 @@ h1.sectionhead {
   color: #3ea447;
 }
 
+@media only screen and (max-width: 855px) {
+    h1.sectionhead {
+       margin-top: -5rem;
+    }
+}
+
+
 .maintxt {
   /*background-color: red;*/
   width: 35%;
@@ -404,49 +674,6 @@ h1.sectionhead {
        margin-top: -15rem;
     }
 }
-
-/*@media only screen and (max-width: 799px) { /*taken out when justify-content was put in for maintxt
-    .maintxt {
-       margin-top: -1%;
-    }
-}
-
-@media only screen and (max-width: 478px/*446*//*) {
-    .maintxt {
-       font-size: 95%;
-    }
-}
-
-@media only screen and (max-width: 456px) and (max-height: 460px) {
-    .maintxt {
-       font-size: 85%;
-    }
-}
-
-@media only screen and (max-width: 427px) {
-    .maintxt {
-       margin-top: 5%;
-    }
-}
-
-@media only screen and (max-width: 427px) and (max-height: 460px) {
-    .maintxt {
-       margin-top: -3%; /*was -7% paddding*//*
-    }
-}
-
-@media only screen and (max-width: 456px) and (max-height: 540px) {
-    .maintxt {
-       margin-top: -6%;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .maintxt {
-       font-size: 85%;
-       margin-top: -6%;
-    }
-}*/
 
 * {
     box-sizing: border-box;
@@ -503,6 +730,12 @@ h1.sectionhead {
     }
 }
 
+@media only screen and (max-width: 885px) {
+    .col-1 {
+       margin-top: 4.5em; /*makes mobile nav margin same as desktop nav's*/
+    }
+}
+
 @media only screen and (max-width: 859px) {
     .col-1 {
        margin-left: 2%;
@@ -514,6 +747,7 @@ h1.sectionhead {
     /*hides dropdown when in mobile view*/
     .col-1 {
        height: 80%; /*jw 40%*/
+       margin-top: 0;
     }
 }
 
@@ -720,68 +954,6 @@ h1.sectionhead {
     }
 }
 
-/*@media only screen and (max-width: 694px) {
-    [class="sectxt"] {
-        margin-top: 7%;
-        margin-left: 32.8%; /*did use float here but causes issues with text responsiveness, needs different margins*/
-    /*}
-}
-
-@media only screen and (max-width: 631px) {
-    [class="sectxt"] {
-        margin-top: 8%;
-    }
-}
-
-@media only screen and (max-width: 544px) {
-    [class="sectxt"] {
-        margin-top: 9%;
-    }
-}
-
-@media only screen and (max-width: 530px) {
-    [class="sectxt"] {
-        margin-left: 46.8%;
-    }
-}
-
-@media only screen and (max-width: 488px) {
-    [class="sectxt"] {
-        font-size: 95%;
-        margin-top: 11%;
-    }
-}
-
-@media only screen and (max-width: 435px) {
-    [class="sectxt"] {
-        margin-top: 13%;
-    }
-}
-
-@media only screen and (max-width: 342px) {
-    [class="sectxt"] {
-        margin-top: 15%;
-        font-size: 90%;
-    }
-}
-
-@media only screen and (max-width: 320px) and (max-height: 460px) {
-    .sectxt {
-       margin-top: 9%;
-    }
-}
-
-@media only screen and (max-width: 315px) {
-    [class="sectxt"] {
-        margin-top: 10%;
-    }
-}
-
-@media only screen and (max-width: 295px) { /*menu layout goes at 300px*/
-  /*.sectxt {
-    font-size: 85%;
-  }
-}
 
 /*start of small txts*/
 p.soccersec { /*fixes issue with sectxt going too far down, see in developer tools*/
