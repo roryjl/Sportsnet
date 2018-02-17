@@ -1,0 +1,687 @@
+/*start of mobile nav*/
+
+.navlogo {
+  max-width: 14em;
+  max-height: 4rem;
+  margin-top: -0.5rem;
+  margin-left: -1rem;
+}/*added*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+body {
+  margin: 0;
+  line-height: 1.4;
+  background: #E1E1E1;
+}
+
+.window {
+  position: relative;
+  display: block;
+  width: 360px;
+  height: 567px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 65px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+  background: #F1F1F1;
+}
+.header {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #256bdb; /*color of main nav was rgba(0, 0, 0, 0.8)*/
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-out, background 1s ease-out;
+  transition: all 0.5s ease-out, background 1s ease-out;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  z-index: 1;
+  display: none;
+}
+
+@media only screen and (max-width: 885px) {
+    .header {
+       display: block;
+    }
+}
+
+
+.header .burger-container {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.header .burger-container #burger {
+  width: 18px;
+  height: 8px;
+  position: relative;
+  display: block;
+  margin: -4px auto 0;
+  top: 50%;
+}
+.header .burger-container #burger .bar {
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: relative;
+  background: #FFF;
+  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.header .burger-container #burger .bar.topBar {
+  -webkit-transform: translateY(0px) rotate(0deg);
+          transform: translateY(0px) rotate(0deg);
+}
+.header .burger-container #burger .bar.btmBar {
+  -webkit-transform: translateY(6px) rotate(0deg);
+          transform: translateY(6px) rotate(0deg);
+}
+.header .icon {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #FFF;
+  font-size: 22px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.header .icon.icon-bag {
+  right: 0;
+  top: 0;
+  left: auto;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+.header ul.menu {
+  position: relative;
+  display: block;
+  padding: 0px 48px 0;
+  list-style: none;
+}
+.header ul.menu li.menu-item {
+  border-bottom: 1px solid #79869b; /*color of seperating lines dropdwn was #333*/
+  margin-top: 5px;
+  -webkit-transform: scale(1.15) translateY(-30px);
+          transform: scale(1.15) translateY(-30px);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99), opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+.header ul.menu li.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.49s;
+          transition-delay: 0.49s;
+}
+.header ul.menu li.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.42s;
+          transition-delay: 0.42s;
+}
+.header ul.menu li.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+.header ul.menu li.menu-item:nth-child(4) {
+  -webkit-transition-delay: 0.28s;
+          transition-delay: 0.28s;
+}
+.header ul.menu li.menu-item:nth-child(5) {
+  -webkit-transition-delay: 0.21s;
+          transition-delay: 0.21s;
+}
+.header ul.menu li.menu-item:nth-child(6) {
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+}
+.header ul.menu li.menu-item:nth-child(7) {
+  -webkit-transition-delay: 0.07s;
+          transition-delay: 0.07s;
+}
+.header ul.menu li.menu-item a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  font-family: "Ek Mukta", sans-serif;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 2.35;
+  font-weight: 200;
+  width: 100%;
+}
+.header.menu-opened {
+  height: 100%;
+  background-color: #062659; /*color of dropdwn was #000*/
+  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
+  transition: all 0.3s ease-in, background 0.5s ease-in;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+.header.menu-opened .burger-container {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.header.menu-opened .burger-container #burger .bar {
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -webkit-transition-delay: 0.1s; /*0.2*/
+          transition-delay: 0.1s; /*0.2*/
+}
+.header.menu-opened .burger-container #burger .bar.topBar {
+  -webkit-transform: translateY(4px) rotate(45deg);
+          transform: translateY(4px) rotate(45deg);
+}
+.header.menu-opened .burger-container #burger .bar.btmBar {
+  -webkit-transform: translateY(3px) rotate(-45deg);
+          transform: translateY(3px) rotate(-45deg);
+}
+.header.menu-opened ul.menu li.menu-item {
+  -webkit-transform: scale(1) translateY(0px);
+          transform: scale(1) translateY(0px);
+  opacity: 1;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(1) {
+  -webkit-transition-delay: 0.27s;
+          transition-delay: 0.27s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(2) {
+  -webkit-transition-delay: 0.34s;
+          transition-delay: 0.34s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(3) {
+  -webkit-transition-delay: 0.41s;
+          transition-delay: 0.41s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(4) {
+  -webkit-transition-delay: 0.48s;
+          transition-delay: 0.48s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(5) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(6) {
+  -webkit-transition-delay: 0.62s;
+          transition-delay: 0.62s;
+}
+.header.menu-opened ul.menu li.menu-item:nth-child(7) {
+  -webkit-transition-delay: 0.69s;
+          transition-delay: 0.69s;
+}
+.header.menu-opened .icon.icon-bag {
+  -webkit-transform: translateX(75px);
+          transform: translateX(75px);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+
+
+
+/*ul.sub-menu{
+  visibility: hidden;
+  position: absolute;
+  background-color: red;
+  list-style-type: none;
+}
+
+.menu-item:hover .sub-menu {
+  visibility: visible;
+}*/
+
+/*end of mobile nav*/
+
+
+
+
+
+
+
+
+
+/*start of desktop nav*/
+
+.webtitle { /*img in nav*/
+  background-image: url(rsign.png);/*was https://s-media-cache-ak0.pinimg.com/originals/3a/6f/26/3a6f2651cd008f7e4caafefcc86870b5.jpg*/
+  background-position: center;
+  width: 129px;
+  height: 70px;
+  background-size: 150px; /*was 400px*/
+  image-resolution: 72dpi;
+}
+
+@media screen and (max-width: 885px) { /*img in nav*/
+  .webtitle {
+   margin-left: 45%;
+ }
+}
+
+@media screen and (max-width: 390px) { /*img in nav*/
+  .webtitle {
+   margin-left: -20%;
+ }
+}
+
+.navimgtxt { /*txt in nav img*/
+  color: #fff; /*was #F4F3F9*/
+}
+
+@media screen and (max-width: 885px) { /*img in nav*/
+  .navimgtxt {
+   font-size: 1%;
+ }
+}
+
+.navbar-left {  /*nav bar content (img/txt)*/
+  max-width: 100px;
+  max-height: 100px;
+  display: inline-block;
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.navbar-left-txt {
+  color: black; /*txt color of 'thejournal'*/
+  font-family: serif;
+  font-size: 1.2em;
+  margin-top: -4px;
+}
+
+@media screen and (max-width: 885px) {
+  .navbar-left-txt {
+   display: none;
+ }
+}
+
+.topnav {  /*main nav positioning*/
+  margin-left: -0.7%;
+  width: 100.7%;
+  position: relative; /*for sticky navbar*/
+  opacity: 0.95;
+  z-index: 999; /*fixes issue where dropdown appeared under image while image was hovered(zoomed-in)*/
+  margin-top: 0rem; /*fixes issue of main nav going too far up*/
+}
+
+@media screen and (max-width: 885px) {
+  .topnav {
+  visibility: hidden;
+ }
+}
+
+@media screen and (max-width: 694px) {
+  .topnav {
+   margin-left: -1%;
+ }
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 70px; /*red box in navbar dimensions*/
+  height: 70px; /*red box in navbar dimensions*/
+  width: 130px;
+  color: #fff; /*txt color in dropdown*/
+  /*text-align: justify; - needed for img in nav*/
+}
+
+@media screen and (max-width: 885px) {
+  nav li {
+   /*margin-left: -200px;   /*moves 'home'*/
+ }
+}
+
+nav ul {
+  text-align: center;
+  background-color: #068df6; /*backgr color in navbar - was #04C5FF*/
+  border-radius: 3px;
+  padding: 0; /*removes gap on left side of main nav*/
+  width: 100%;
+  margin-top: -1%; /*removes gap that was on top of nav, should check impact on big screens*/
+}
+
+@media screen and (max-width: 885px) {
+  nav ul {
+   border-radius: 0px; /*needs to be removed because hamburger icon has no border-radius*/
+ }
+}
+
+nav a:hover {
+background-color: #068df6/*conflicts w/ thing that makes mainav stay hovered when submen is being hov.- mainnav backgr color hover - was  #04C5FF*/
+cursor: pointer;
+border-radius: 0px; /*was 5px*/
+/*color: rgba(0,0,0,0.1); text hover color main nav*/
+}
+
+nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc being hovered*/
+  background-color: #068df6; /*was #04C5FF */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; /*text color in mainnav - was #068df6*/
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+}
+
+/*start of dropdown*/
+
+ul.sub-menu{
+  position: absolute;
+  background-color: #068df6; /*dropdown backroundcolor was #04C5FF*/
+  list-style-type: none;
+  /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
+  font-family: 'Ubuntu', sans-serif;
+  font-variant: normal;
+  width: 130px; /*was 124px*/
+  height: 220px; /*defines height of dropdown, new- wasnt always here*/
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  visibility: hidden; /*hides dropdown when not hovered*/
+  font-size: .65em;
+  border-radius: 0px 0px 5px 5px; /*rounds bottom corners on dropdown*/
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6); /* shadow on dropdown*/
+  border: 1px solid #414143;
+  transform: translateY(-2em); /* dropdown slide down animation start*/
+  z-index: 10;
+  transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s; /* dropdown slide down animation end was all 0.3s*/
+  animation: pulse 3s; /*opacity animation*/
+
+  /*transform: scale(0) translateX(-50%);/*part of pl website dropdown animation
+  transform-origin: left top;
+  transition: all 1s;
+  -webkit-transform: scale(0) translateX(-50%);*/
+}
+
+@media screen and (max-width: 885px) {
+  ul.sub-menu {
+   width: 700px;
+   justify-content: center;
+ }
+}
+
+@keyframes pulse { /*opacity animation*/
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ul.sub-menu li{
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 63px; /*height of dropdown li*/
+  border-radius: 0px;
+  text-align: center;
+}
+
+ul.sub-menu li:hover {  /*dropdown menu hover*/
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 0px;
+  width: 128px; /*width for dropdown hover*/
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0;
+  /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /*shadow on individual items in dropdown*/
+}
+
+/*@media only screen and (max-width: 712px) {
+    /*hides dropdown when in mobile view*/
+    /*.sub-menu {
+       display: none;
+    }
+}*/
+
+nav li:hover .sub-menu{
+  visibility: visible;  /*makes dropdown appear when hovered*/
+  margin-left: 0px; /*dropdown margin left*/
+  z-index: 10; /*dropdown slide animation start*/
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /*allows you to hover on dropdown after animation --dropdown slide animation end*/
+}
+
+/*end of dropdown*/
+
+
+
+
+/*underline animation for nav start*/
+
+li {
+  display: block; /*was inline-block before apple mob nav*/
+  position: relative;
+  border: 0px solid transparent;/*was 2px, gap between main nav and dropdown*/
+  color: #005689;
+}
+
+/*@media only screen and (min-width: 885px) {  /*to remove underline animation from hamburger*/
+  /*li {
+    display: inline-block;
+    position: relative;
+    border: 0px solid transparent;/*was 2px, gap between main nav and dropdown*/
+    /*color: #005689;
+  }
+}*/
+
+
+li::after {
+  width: 0%;
+  height: 2px; /*width of white animation line*/
+  display: block;
+  background-color: #404042; /*line under(animation) color CLOSING*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  -webkit-transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: left 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); /*these figures (0.5) control speed of animation*/
+}
+
+@media only screen and (max-width: 885px) {  /*to remove underline animation from hamburger*/
+    li::after {
+      -webkit-transition: left 0s cubic-bezier(0,0,0,0), width 0s cubic-bezier(0, 0, 0, 0);
+      transition: left 0s cubic-bezier(0, 0, 0, 0), width 0s cubic-bezier(0, 0, 0, 0);
+    }
+}
+
+li:hover::after {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #fff; /*line under(animation) color OPENing*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+@media only screen and (max-width: 885px) {  /*to remove underline animation from hamburger*/
+    li:hover::after {
+      width: 0%;
+      height: 0px;
+      display: block;
+      background-color: #ddd; /*line under(animation) color*/
+      content: " ";
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+}
+
+
+.navimgtxt::after {  /*to remove underline animation from logo*/
+  -webkit-transition: left 0s cubic-bezier(0,0,0,0), width 0s cubic-bezier(0, 0, 0, 0);
+  transition: left 0s cubic-bezier(0, 0, 0, 0), width 0s cubic-bezier(0, 0, 0, 0);
+}
+
+.navimgtxt:hover::after { /*to remove underline animation from logo*/
+  width: 0%;
+  height: 0px;
+  display: block;
+  background-color: #ddd; /*line under(animation) color*/
+  content: " ";
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+/*underline animation for nav end*/
+
+
+
+/*hamburger mobile navbar icon*/
+.icon {
+  display: none;
+}
+/*icon end*/
+/*end of desktop nav*/
+
+
+
+
+
+
+
+
+html {
+    font-family: "Ubuntu", sans-serif;
+    /*background-color: #d7d5dd;*/
+    background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
+}
+
+a:link{ /*removes underline from links*/
+  text-decoration: none!important;
+  cursor: pointer;
+}
+
+a:visited { /*removes purple txt color from links*/
+   text-decoration: none;
+   color: inherit;
+}
+
+.sectxt a {
+  color: black;
+}
+
+.footsec a {
+  color: #F60;
+}
+
+.hurlsec a {
+  color: #068df6;
+}
+
+.soccersec a {
+  color: #3ea447;
+}
+
+.f1sec a {
+  color: #C00;
+}
+
+
+html, body { /*fixes issue with quirks mode and doctype*/
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 694px) {
+    body {
+       margin: 0px;
+    }
+}
+
+div { /*fixes issue with quirks mode and doctype*/
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+    clear: both;
+    position: sticky;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    text-align: center;
+    background-color: #414143;
+    padding: 1px;
+    width: 101%;
+    margin-left: -1%;
+}
+
+.footer p {
+  color: #068df6;
+}
+
+
+
+
+
+
+
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  width: 80%;
+  height: 200rem;
+  background-color: lightgray;
+  margin-left: 6rem;
+}
+
+
+@media only screen and (max-width: 695px) {
+    .row {
+       margin-left: 4rem;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .row {
+       margin-top: -6rem;
+    }
+}
+
+@media only screen and (max-width: 502px) {
+    .row {
+       margin-left: 2rem;
+    }
+}
