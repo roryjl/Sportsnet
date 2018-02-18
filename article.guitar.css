@@ -750,3 +750,36 @@ iframe {
        margin-left: 2rem;
     }
 }
+
+
+
+.textcontainer-jeff {
+  /*background-color: red;*/
+  width: 80%;
+  margin-left: 6rem;
+  height: 50rem;
+}
+
+
+@media only screen and (max-width: 810px) {
+    .textcontainer-jeff  {
+       height: 70rem;
+}
+
+@media only screen and (max-width: 695px) {
+    .textcontainer-jeff  {
+       margin-left: 4rem;
+    }
+}
+
+@media only screen and (max-width: 502px) {
+    .textcontainer-jeff  {
+       margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .textcontainer-jeff  {
+       height: 90rem;
+    }
+}
