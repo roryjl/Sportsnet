@@ -1110,7 +1110,7 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 .col-3 {
   width: 24.33%;
   /*background-color: white;*/
-  background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
+  background-image: white; /*radial-gradient(circle at center,#fff 0,#f7f7f7 100%); skysports col color*/
   color: #ffffff;
   margin-top: 30px;
   margin-right: 2%;
@@ -1194,7 +1194,7 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 .col-4 {
 width: 24.33%;
 /*background-color: white;*/
-background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
+background-image: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 3%; /*23px*/
@@ -1280,7 +1280,7 @@ padding: 0.3%; /*to make img fit full div side*/
 .col-5 {
 width: 24.33%;
 /*background-color: white;*/
-background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
+background-image: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
@@ -1370,7 +1370,7 @@ padding: 0.3%; /*to make img fit full div side*/
 .col-6 {
 width: 24.33%;
 /*background-color: white;*/
-background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
+background-image: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
@@ -1455,7 +1455,7 @@ padding: 0.3%; /*to make img fit full div side*/
 .col-7 {
 width: 24.33%;
 /*background-color: white;*/
-background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%);/* skysports col color*/
+background-image: white;
 color: #ffffff;
 margin-top: 30px;
 display: inline-block;
