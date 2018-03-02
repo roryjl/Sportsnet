@@ -1,3 +1,5 @@
+/*img in nav required to be saved in same folder as other files (rsign/png)*/
+
 /*start of mobile nav*/
 
 .navlogo {
@@ -12,7 +14,6 @@
 body {
   margin: 0;
   line-height: 1.4;
-  background: #E1E1E1;
 }
 
 .window {
@@ -333,7 +334,7 @@ body {
 
 @media screen and (max-width: 885px) {
   .topnav {
-  visibility: hidden;
+  display: none;
  }
 }
 
@@ -611,6 +612,7 @@ p {
 
 h1 {
   color: black;
+  font-weight: lighter;
 }
 
 h3 {
@@ -708,6 +710,7 @@ h3 {
         width: 95.5%;
     }
 }
+
 
 @media only screen and (max-width: 915px) {
     /* For mobile phones: */
@@ -829,6 +832,13 @@ h3 {
         margin-left: 2%;
     }
 }
+
+@media only screen and (max-width: 834px) and (min-height: 1010px) {
+    .col-2 {
+       height: 30rem;
+    }
+}
+
 
 @media only screen and (max-width: 855px) {
     .col-2:hover {
@@ -1121,6 +1131,13 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
         width: 30.5%;
     }
 }
+
+@media only screen and (max-width: 834px) and (max-height: 1010px) {
+    .col-3 {
+       height: 30rem;
+    }
+}
+
 
 @media only screen and (max-width: 915px) {
     [class="col-3"] {
