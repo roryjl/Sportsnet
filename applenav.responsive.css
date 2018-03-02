@@ -746,7 +746,7 @@ h3 {
     }
 }
 
-@media only screen and (max-width: 834px) and (max-height: 1010px) {
+@media only screen and (max-width: 834px) and (min-height: 1010px) {
     .col-1 {
        height: 40rem;
     }
