@@ -632,7 +632,7 @@ h3 {
 @media only screen and (max-width: 855px) {
     .maintxt {
        margin-left: 5%;
-       margin-top: 0;
+       margin-top: -0.5rem;
        width: 90%;
        font-size: .9rem;
     }
@@ -641,7 +641,7 @@ h3 {
 @media only screen and (max-width: 694px) {
     .maintxt {
        font-size: .8rem;
-       margin-top: -0.5em;
+       margin-top: -1rem;
     }
 }
 
@@ -872,7 +872,7 @@ h3 {
         background-color: white;
         margin-left: 2.5%;/*margin-left: -2.4%;*/
         margin-top: 10px;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
@@ -1109,8 +1109,8 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 
 .col-3 {
   width: 24.33%;
-  /*background-color: white;*/
-  background-image: white; /*radial-gradient(circle at center,#fff 0,#f7f7f7 100%); skysports col color*/
+  background-color: white;
+  /*background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); skysports col color*/
   color: #ffffff;
   margin-top: 30px;
   margin-right: 2%;
@@ -1186,15 +1186,14 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
         background-color: white;
         margin-top: 10px;
         margin-left: 2.5%;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
 
 .col-4 {
 width: 24.33%;
-/*background-color: white;*/
-background-image: white;
+background-color: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 3%; /*23px*/
@@ -1272,15 +1271,14 @@ padding: 0.3%; /*to make img fit full div side*/
         background-color: white;
         margin-left: 2.5%;
         margin-top: 10px;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
 
 .col-5 {
 width: 24.33%;
-/*background-color: white;*/
-background-image: white;
+background-color: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
@@ -1362,15 +1360,14 @@ padding: 0.3%; /*to make img fit full div side*/
         background-color: white;
         margin-left: 2.5%;
         margin-top: 10px;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
 
 .col-6 {
 width: 24.33%;
-/*background-color: white;*/
-background-image: white;
+background-color: white;
 color: #ffffff;
 margin-top: 30px;
 margin-right: 2%;
@@ -1447,15 +1444,14 @@ padding: 0.3%; /*to make img fit full div side*/
         background-color: white;
         margin-left: 2.5%;
         margin-top: 10px;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
 
 .col-7 {
 width: 24.33%;
-/*background-color: white;*/
-background-image: white;
+background-color: white;
 color: #ffffff;
 margin-top: 30px;
 display: inline-block;
@@ -1530,7 +1526,7 @@ padding: 0.3%; /*to make img fit full div side*/
         background-color: white;
         margin-left: 2.5%;
         margin-top: 10px;
-        height: 20%; /*was 27%*/
+        height: 7.5rem; /*was 20%*/
         padding: 0;
     }
 }
