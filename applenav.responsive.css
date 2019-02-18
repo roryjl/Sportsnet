@@ -389,7 +389,9 @@ nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc be
 nav a {
   text-decoration: none;
   color: #fff; /*text color in mainnav - was #068df6*/
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
+  font-weight: normal;
   display: block;
 }
 
@@ -400,7 +402,8 @@ ul.sub-menu{
   background-color: #068df6; /*dropdown backroundcolor was #04C5FF*/
   list-style-type: none;
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
   font-variant: normal;
   width: 130px; /*was 124px*/
   height: 220px; /*defines height of dropdown, new- wasnt always here*/
@@ -625,8 +628,10 @@ h3 {
   width: 35%;
   margin-top: -20rem;
   margin-left: 64%;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
   /*font-variant: small-caps;*/
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
   justify-content: center;
 }
 
@@ -929,7 +934,8 @@ h3 {
   margin-left: 5%;
   text-decoration: none;
   margin-top: 2rem; /*9%*/
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-variant: normal;
   justify-content: center;
@@ -969,7 +975,8 @@ p.soccersec { /*fixes issue with sectxt going too far down, see in developer too
 .soccersec {
   color: #3ea447;
   margin-left: 5%;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
 }
 
 @media only screen and (max-width: 694px) {
@@ -1007,7 +1014,8 @@ p.f1sec { /*fixes issue with sectxt going too far down, see in developer tools*/
 .f1sec {
   color: #C00;
   margin-left: 5%;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
 }
 
 @media only screen and (max-width: 694px) {
@@ -1044,7 +1052,8 @@ p.footsec { /*fixes issue with sectxt going too far down, see in developer tools
 .footsec {
   color: #F60;
   margin-left: 5%;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
 }
 
 @media only screen and (max-width: 694px) {
@@ -1081,7 +1090,8 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
 .hurlsec {
   color: #068df6;
   margin-left: 5%;
-  font-family: 'Ubuntu', sans-serif;
+  /*font-family: 'Ubuntu', sans-serif;*/
+  font-family: 'Nunito', sans-serif;
 }
 
 @media only screen and (max-width: 694px) {
@@ -1549,6 +1559,8 @@ padding: 0.3%; /*to make img fit full div side*/
 
 html {
     /*font-family: "Ubuntu", sans-serif;*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
     background-color: #fff;
     /*background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
 }
