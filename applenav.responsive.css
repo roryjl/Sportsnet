@@ -680,13 +680,14 @@ h3 {
 
 .col-1 {
   width: 77%;
-  /*background-color: white;*/
-  background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); /*skysports col color*/
+  background-color: white;
+  /*background-image: radial-gradient(circle at center,#fff 0,#f7f7f7 100%); /*skysports col color*/
   color: #ffffff;
   margin-left: 10%;
   height: 24rem; /*was 55%*/
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #d2d7db;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-radius: 8px;
   padding: 0.4%; /*to make img fit full div side, universal selector gives padding automatically*/
   margin-top: 6em; /*for sticky navbar*/
 }
@@ -795,7 +796,8 @@ h3 {
   height: 20rem; /*50*/
   clear: both;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #d2d7db;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-radius: 8px;
   padding: 0.3%; /*to make img fit full div side*/
   /*border:5px solid #f7f7f7;*/
   /*border-color: red;
@@ -1117,7 +1119,8 @@ p.hurlsec { /*fixes issue with sectxt going too far down, see in developer tools
   display: inline-block;
   height: 20rem; /*50%*/
   overflow: hidden;
-  box-shadow: 0px 2px 2px 0px #d2d7db;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-radius: 8px;
   padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1200,7 +1203,8 @@ margin-right: 3%; /*23px*/
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #d2d7db;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+border-radius: 8px;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1286,7 +1290,8 @@ margin-left: 10%;
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #d2d7db;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+border-radius: 8px;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1374,7 +1379,8 @@ margin-right: 2%;
 display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
-box-shadow: 0px 2px 2px 0px #d2d7db;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+border-radius: 8px;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1458,7 +1464,8 @@ display: inline-block;
 height: 20rem; /*50%*/
 overflow: hidden;
 margin-bottom: 2%; /*for footer*/
-box-shadow: 0px 2px 2px 0px #d2d7db;
+box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+border-radius: 8px;
 padding: 0.3%; /*to make img fit full div side*/
 }
 
@@ -1539,9 +1546,9 @@ padding: 0.3%; /*to make img fit full div side*/
 .col-12 {width: 100%;}
 
 html {
-    font-family: "Ubuntu", sans-serif;
-    /*background-color: #d7d5dd;*/
-    background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
+    /*font-family: "Ubuntu", sans-serif;*/
+    background-color: #fff;
+    /*background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
 }
 
 a:link{ /*removes underline from links*/
