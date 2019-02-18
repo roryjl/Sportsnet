@@ -388,7 +388,7 @@ nav ul li:hover {  /*makes main nav hover color #d5d5d5 while sub-menu is acc be
 nav a {
   text-decoration: none;
   color: #fff; /*text color in mainnav - was #068df6*/
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito', sans-serif;
   display: block;
 }
 
@@ -399,8 +399,9 @@ ul.sub-menu{
   background-color: #068df6; /*dropdown backroundcolor was #04C5FF*/
   list-style-type: none;
   /*color: rgba(0, 0, 0, 0.8); /*was dropdown font color was rgba(255, 255, 255, 0.7)*/
-  font-family: 'Ubuntu', sans-serif;
-  font-variant: normal;
+  /*font-family: 'Ubuntu', sans-serif;
+  font-variant: normal;*/
+  font-family: 'Nunito', sans-serif;
   width: 130px; /*was 124px*/
   height: 220px; /*defines height of dropdown, new- wasnt always here*/
   padding-left: 0px;
@@ -576,7 +577,7 @@ li:hover::after {
 
 
 html {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Nunito', sans-serif;
     /*background-color: #d7d5dd;*/
     background-image: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd); /*skysports background color*/
 }
@@ -659,6 +660,11 @@ div { /*fixes issue with quirks mode and doctype*/
 h1 {
   text-align: center;
   /*font-size: 3vw;*/
+}
+
+h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: normal;
 }
 
 .row {
