@@ -582,6 +582,7 @@ li:hover::after {
   -moz-transition: all 0.5s;  /* was taken out because dropdown intially went underneath mainimg - fixed by .topnav z-index: 999; (parent element)*/
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-radius: 8px;
 }
 
 .mainimg:hover {
@@ -885,6 +886,7 @@ h3 {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-radius: 8px;
 }
 
 .secimg:hover {
